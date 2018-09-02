@@ -8,3 +8,6 @@ Temp
 *.vs
 Thumbs.db*
 obj/Debug
+Assets/Intercept/Fonts*
+Assets/Intercept/Textures*
+Assets/Intercept/SFX*
