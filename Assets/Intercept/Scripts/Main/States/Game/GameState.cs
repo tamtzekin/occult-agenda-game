@@ -97,19 +97,26 @@ public class GameState : MainState {
 			ChevronButtonView chevronView = null;
 			while(story.canContinue) {
 				string content = story.Continue().Trim();
-				ContentView contentView = CreateContentView(content);
-				if(!story.canContinue) {
-					if(story.currentChoices.Count > 0) {
-						choiceView = CreateChoiceGroupView(story.currentChoices);
-					} else {
-						chevronView = CreateChevronView();
-					}
+				if (content.Length > 0)
+				{
+					ContentView contentView = CreateContentView(content);
+					if (!story.canContinue)
+					{
+						if (story.currentChoices.Count > 0)
+						{
+							choiceView = CreateChoiceGroupView(story.currentChoices);
+						}
+						else
+						{
+							chevronView = CreateChevronView();
+						}
 
+					}
+					while (contentView.textTyper.typing)
+						yield return null;
+					if (story.canContinue)
+						yield return new WaitForSeconds(Mathf.Min(1.0f, contentView.textTyper.targetText.Length * 0.01f));
 				}
-				while(contentView.textTyper.typing)
-					yield return null;
-				if(story.canContinue)
-					yield return new WaitForSeconds(Mathf.Min(1.0f, contentView.textTyper.targetText.Length * 0.01f));
 			}
 			if(story.currentChoices.Count > 0) {
 				yield return new WaitForSeconds(1f);
