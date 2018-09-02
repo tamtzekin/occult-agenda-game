@@ -65,15 +65,46 @@ public class GameState : MainState {
 		});
 	}
 
-	public void NextMeeting(string meetingName)
+	private IEnumerator FadeBetweenMeetings(string meetingName)
 	{
+		CanvasGroup fadeCanvasGroup = Main.Instance.introState.group;
+
+		fadeCanvasGroup.gameObject.SetActive(true);
+		fadeCanvasGroup.alpha = 0;
+		fadeCanvasGroup.interactable = true;
+		fadeCanvasGroup.blocksRaycasts = true;
+
+		Main.Instance.introState.inklePresentsText.gameObject.SetActive(false);
+		Main.Instance.introState.theInterceptText.gameObject.SetActive(false);
+
+		FloatTween fadeOutTween = new FloatTween();
+		fadeOutTween.Tween(0, 1, 2);
+		while (fadeOutTween.tweening)
+		{
+			fadeOutTween.Loop();
+			if(fadeOutTween.currentValue > fadeCanvasGroup.alpha)
+				fadeCanvasGroup.alpha = fadeOutTween.currentValue;
+			yield return null;
+		}
+		fadeCanvasGroup.alpha = 1;
+
 		currentPage.gameObject.SetActive(false);
 		story.ChoosePathString(meetingName);
-		currentPage = GameObject.Instantiate<Transform>(pagePrefab);
-		currentPage.transform.SetParent(GameObject.Find("Game Canvas").transform, false);
+		currentPage = GameObject.Instantiate<Transform>(pagePrefab, GameObject.Find("Game Canvas").transform, false);
 		contentManager = currentPage.GetComponentInChildren<ContentManager>();
 		contentParent = contentManager.layoutGroup.transform;
 		StartCoroutine(OnAdvanceStory());
+
+		FloatTween fadeInTween = new FloatTween();
+		fadeInTween.Tween(1, 0, 2);
+		while (fadeInTween.tweening)
+		{
+			fadeInTween.Loop();
+			fadeCanvasGroup.alpha = fadeInTween.currentValue;
+			yield return null;
+		}
+		fadeCanvasGroup.interactable = false;
+		fadeCanvasGroup.blocksRaycasts = false;
 	}
 
 	public void Clear () {
@@ -133,7 +164,7 @@ public class GameState : MainState {
 						if (tagValue[0] == "NextMeeting")
 						{
 							Debug.Log("Trying to go to " + tagValue[1]);
-							NextMeeting(tagValue[1]);
+							StartCoroutine(FadeBetweenMeetings(tagValue[1]));
 							foundMeeting = true;
 						}
 					}
