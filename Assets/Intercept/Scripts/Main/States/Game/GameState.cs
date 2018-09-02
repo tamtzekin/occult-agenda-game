@@ -115,8 +115,26 @@ public class GameState : MainState {
 				yield return new WaitForSeconds(1f);
 				choiceView.RenderChoices();
 				yield return new WaitForSeconds(0.5f);
-			} else {
-				chevronView.Render();
+			} else { // finished typing out, can't continue and no choices
+				bool foundMeeting = false;
+				foreach(String tag in story.currentTags)
+				{
+					Debug.Log("Read tag " + tag);
+					if(tag.Contains("="))
+					{
+						string[] tagValue = tag.Split('=');
+						if (tagValue[0] == "NextMeeting")
+						{
+							Debug.Log("Trying to go to " + tagValue[1]);
+							NextMeeting(tagValue[1]);
+							foundMeeting = true;
+						}
+					}
+				}
+				if (!foundMeeting)
+				{
+					chevronView.Render();
+				}
 				yield return new WaitForSeconds(2);
 			}
 		} else {
