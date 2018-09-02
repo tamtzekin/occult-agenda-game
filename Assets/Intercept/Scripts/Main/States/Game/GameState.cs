@@ -58,6 +58,11 @@ public class GameState : MainState {
 		}
 		story = new Story(storyJSON.text);
 		StartCoroutine(OnAdvanceStory());
+
+		story.ObserveVariable("insanity", (string varName, object newValue) =>
+		{
+			Debug.Log("insanity changed to " + newValue);
+		});
 	}
 
 	public void NextMeeting(string meetingName)
