@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62969df608484908859668afc3e4e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: THE INTERCEPT
+  content: INK JAM GAME
   letterTypeTime: {x: 0.23, y: 0.27}
 --- !u!222 &1003711405
 CanvasRenderer:
@@ -4088,7 +4088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62969df608484908859668afc3e4e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: INKLE PRESENTS
+  content: AN INK JAM GAME
   letterTypeTime: {x: 0.11, y: 0.14}
 --- !u!222 &1835827616
 CanvasRenderer:
