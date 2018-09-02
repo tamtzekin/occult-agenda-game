@@ -3437,7 +3437,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
@@ -3490,7 +3490,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c0ced49fef8ab44b09dedb91f077d7cb, type: 3}
+  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4518,7 +4518,7 @@ MonoBehaviour:
   contentViewPrefab: {fileID: 11474058, guid: 5737aec8c2ab2a14abbe875326689c4e, type: 2}
   choiceGroupViewPrefab: {fileID: 11497902, guid: 7b127fd649eb6154da2ef900a5761b0c,
     type: 2}
-  chevronViewPrefab: {fileID: 11426394, guid: 5b488a38d9c5f4804be1798096451c61, type: 2}
+  chevronViewPrefab: {fileID: 11426394, guid: d732cde07d37f5145bf8baa4547128ac, type: 2}
   emptyViewPrefab: {fileID: 11401842, guid: 8cdcc425c610b4d10bce02dd28dd93f7, type: 2}
   contentParent: {fileID: 0}
   choiceContainerView: {fileID: 612862128}
