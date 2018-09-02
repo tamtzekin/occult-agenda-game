@@ -31,14 +31,24 @@ public class GameState : MainState {
 	public SettingsView settingsView;
 	public SettingsButton settingsButton;
 
+    public Transform pagePrefab;
+
+    Transform currentPage;
+
 	private void Awake () {
-		contentManager.enabled = false;
+		//contentManager.enabled = false;
 		settingsView.Hide();
 		settingsButton.Hide();
 	}
 
 	public override void Enter () {
 		base.Enter ();
+
+		currentPage = GameObject.Instantiate<Transform>(pagePrefab);
+		currentPage.transform.SetParent(GameObject.Find("Game Canvas").transform, false);
+		contentManager = currentPage.GetComponentInChildren<ContentManager>();
+		contentParent = contentManager.layoutGroup.transform;
+
 		contentManager.enabled = true;
 		settingsButton.FadeIn();
 
@@ -47,6 +57,17 @@ public class GameState : MainState {
 			enabled = false;
 		}
 		story = new Story(storyJSON.text);
+		StartCoroutine(OnAdvanceStory());
+	}
+
+	public void NextMeeting(string meetingName)
+	{
+		currentPage.gameObject.SetActive(false);
+		story.ChoosePathString(meetingName);
+		currentPage = GameObject.Instantiate<Transform>(pagePrefab);
+		currentPage.transform.SetParent(GameObject.Find("Game Canvas").transform, false);
+		contentManager = currentPage.GetComponentInChildren<ContentManager>();
+		contentParent = contentManager.layoutGroup.transform;
 		StartCoroutine(OnAdvanceStory());
 	}
 
