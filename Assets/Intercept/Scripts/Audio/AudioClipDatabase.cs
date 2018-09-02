@@ -7,8 +7,10 @@ public class AudioClipDatabase : MonoSingleton<AudioClipDatabase> {
 	public AudioClip attachingPaperSound;
 	public AudioClip horrorSting;
 
+	public float keyboardVolume = 1;
+
 	public void PlayKeySound () {
-		PlaySound(keySounds[Random.Range(0, keySounds.Count)]);
+		PlaySound(keySounds[Random.Range(0, keySounds.Count)], keyboardVolume);
 	}
 
 	public void PlayAttachingPaperSound () {
