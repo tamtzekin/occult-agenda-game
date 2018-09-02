@@ -3064,21 +3064,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keySounds:
-  - {fileID: 8300000, guid: d4a76855a65d34ab8b87eb64b879cd0a, type: 3}
-  - {fileID: 8300000, guid: e1a9c9147e4c54ffa9462af805563b67, type: 3}
-  - {fileID: 8300000, guid: 4e8836e5078d44672a2eb9b3292d6f80, type: 3}
-  - {fileID: 8300000, guid: a63a6b9e7f1614ba8a4a169ef6de04ad, type: 3}
-  - {fileID: 8300000, guid: 7f66f8f5c8ebd4f61bd3946d15d0efc5, type: 3}
-  - {fileID: 8300000, guid: 81eb16bc51ca341de9994db6d3eaec9b, type: 3}
-  - {fileID: 8300000, guid: 4a3e9aea83b5e4e39bab3c32f458dde8, type: 3}
-  - {fileID: 8300000, guid: 4325484e28fa4454ab00f0f29944a05a, type: 3}
-  - {fileID: 8300000, guid: 5f05a991c5ed4455faea32fc7d345584, type: 3}
-  - {fileID: 8300000, guid: 1f76d62a9ca384523b7a8bb747bdf3d8, type: 3}
-  - {fileID: 8300000, guid: d632f93a76785400b81ffd7690571a8e, type: 3}
-  - {fileID: 8300000, guid: cf55229c4541c4eb99fdffa97a326fad, type: 3}
-  - {fileID: 8300000, guid: f143638fcff314503b76143eb4372bf2, type: 3}
-  - {fileID: 8300000, guid: 3c8bfcf0f9f064249875bd2f3115b6a6, type: 3}
-  - {fileID: 8300000, guid: a9d3baba42c334d01a04fe21110a0916, type: 3}
+  - {fileID: 8300000, guid: 0da19f8e7731c054b94b2aac4ee8d702, type: 3}
+  - {fileID: 8300000, guid: acb5a1adf2391c24ab898c95d32f9a3e, type: 3}
+  - {fileID: 8300000, guid: b36422143429af54791147cd4e5702b9, type: 3}
+  - {fileID: 8300000, guid: 60eeb3ce65467474e8a9943e5cb4e50c, type: 3}
+  - {fileID: 8300000, guid: ef28c60d8d8a2064fbd306a93a9bb5a6, type: 3}
+  - {fileID: 8300000, guid: e44fde03d25821b428bb7bcfaf90c205, type: 3}
+  - {fileID: 8300000, guid: b5b70a59fa10f3e42a00e68e17f797b9, type: 3}
+  - {fileID: 8300000, guid: c6db2417b7a96354fb63c58d9bbfc141, type: 3}
+  - {fileID: 8300000, guid: 4c8277522c2745a41b4cc26985830767, type: 3}
+  - {fileID: 8300000, guid: e741761dd81b43f4cbe9f4c6c5a14a91, type: 3}
+  - {fileID: 8300000, guid: 52823deeb3092614585e584ded0940cf, type: 3}
   attachingPaperSound: {fileID: 8300000, guid: 5da4d52db5d764cb68de1d404346ca2e, type: 3}
   horrorSting: {fileID: 8300000, guid: 60f518e7a0ea04dcb9d4c223e9bf9957, type: 3}
 --- !u!114 &1392399343
