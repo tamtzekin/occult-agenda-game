@@ -37,6 +37,8 @@ public class GameState : MainState {
 
 	int previousSanityValue = 0;
 
+	public Text filenameText;
+
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
@@ -153,6 +155,17 @@ public class GameState : MainState {
 			ChevronButtonView chevronView = null;
 			while(story.canContinue) {
 				string content = story.Continue().Trim();
+				foreach (String tag in story.currentTags)
+				{
+					if (tag.Contains("="))
+					{
+						string[] tagValue = tag.Split('=');
+						if (tagValue[0] == "Filename")
+						{
+							filenameText.text = tagValue[1];
+						}
+					}
+				}
 				if (content.Length > 0)
 				{
 					ContentView contentView = CreateContentView(content);
