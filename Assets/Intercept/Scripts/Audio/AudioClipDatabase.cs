@@ -7,6 +7,10 @@ public class AudioClipDatabase : MonoSingleton<AudioClipDatabase> {
 	public AudioClip attachingPaperSound;
 	public AudioClip horrorSting;
 
+	public AudioClip sanityIncreaseAudio;
+
+	public AudioClip sanityDecreaseAudio;
+
 	public float keyboardVolume = 1;
 
 	public void PlayKeySound () {
@@ -19,6 +23,16 @@ public class AudioClipDatabase : MonoSingleton<AudioClipDatabase> {
 
 	public void PlayHorrorSting () {
 		PlaySound(horrorSting);
+	}
+
+	public void PlaySanityIncrease()
+	{
+		PlaySound(sanityIncreaseAudio);
+	}
+
+	public void PlaySanityDecrease()
+	{
+		PlaySound(sanityDecreaseAudio);
 	}
 
 	private void PlaySound (AudioClip audioClip, float volume = 1) {

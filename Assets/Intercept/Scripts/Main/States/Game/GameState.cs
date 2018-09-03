@@ -35,6 +35,8 @@ public class GameState : MainState {
 
     Transform currentPage;
 
+	int previousSanityValue = 0;
+
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
@@ -62,6 +64,19 @@ public class GameState : MainState {
 		story.ObserveVariable("insanity", (string varName, object newValue) =>
 		{
 			Debug.Log("insanity changed to " + newValue);
+			int newSanity = (int) newValue;
+			if(newSanity > previousSanityValue)
+			{// sanity increased
+				Debug.Log("Play sanity increase audio");
+				AudioClipDatabase.Instance.PlaySanityIncrease();
+				
+			}
+			else
+			{// sanity decreased
+				Debug.Log("Play sanity decrease audio");
+				AudioClipDatabase.Instance.PlaySanityDecrease();
+			}
+			previousSanityValue = newSanity;
 		});
 	}
 
