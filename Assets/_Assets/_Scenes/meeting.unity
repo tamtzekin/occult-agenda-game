@@ -3173,6 +3173,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keySounds:
+  - {fileID: 8300000, guid: 8f39bc8df4f21d94faab4c75f896e5e8, type: 3}
+  - {fileID: 8300000, guid: 7880c1d19aee62b449f8a256e73892ec, type: 3}
+  - {fileID: 8300000, guid: 06ec9f3521e869d42986c0e7f90d3e7c, type: 3}
+  - {fileID: 8300000, guid: 3d32f8ed23d1cf449aa9687cd864371b, type: 3}
+  - {fileID: 8300000, guid: afed799dbbd5a684bb53fd33ea2f0876, type: 3}
+  - {fileID: 8300000, guid: d44c9516114892645b1d866a8ef50f27, type: 3}
+  - {fileID: 8300000, guid: 6d136a5102dfea84f9f17ed050218a32, type: 3}
+  - {fileID: 8300000, guid: b78d73a1496679947952650af43b33bc, type: 3}
+  - {fileID: 8300000, guid: f30703a11e280904ebdae350e546b1ff, type: 3}
+  - {fileID: 8300000, guid: 3e5bf941c1326a4429f0c4662edd5456, type: 3}
+  - {fileID: 8300000, guid: 37cee0cfc05407c439382636f38714a2, type: 3}
+  spookyKeySounds:
   - {fileID: 8300000, guid: 713f7a2f29801c8468d1f98b3531fd1e, type: 3}
   - {fileID: 8300000, guid: ee646362e394b6942b14b4f5969830f3, type: 3}
   - {fileID: 8300000, guid: b8587170a8b867a4a8c786e2bdd2a6af, type: 3}
@@ -3189,6 +3201,7 @@ MonoBehaviour:
   sanityIncreaseAudio: {fileID: 8300000, guid: 178b9f8a59fe3794d841a5f07d083545, type: 3}
   sanityDecreaseAudio: {fileID: 8300000, guid: 01336828461505543964ecd6976143c6, type: 3}
   keyboardVolume: 0.2
+  spooky: 0
 --- !u!114 &1392399343
 MonoBehaviour:
   m_ObjectHideFlags: 0

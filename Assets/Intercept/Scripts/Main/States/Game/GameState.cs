@@ -113,6 +113,7 @@ public class GameState : MainState {
 		if (meetingName.Equals("meetingthree"))
 		{
 			Debug.Log("Meeting Three");
+			AudioClipDatabase.Instance.spooky = true;
 			FindObjectOfType<BackgroundAmbienceController>().QuietMode();
 			GameObject.Find("PactAudio").GetComponent<AudioSource>().Play();
 		}

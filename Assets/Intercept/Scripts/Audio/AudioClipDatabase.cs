@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class AudioClipDatabase : MonoSingleton<AudioClipDatabase> {
 	public List<AudioClip> keySounds;
+	[SerializeField] List<AudioClip> spookyKeySounds;
+
 	public AudioClip attachingPaperSound;
 	public AudioClip horrorSting;
 
@@ -13,8 +15,18 @@ public class AudioClipDatabase : MonoSingleton<AudioClipDatabase> {
 
 	public float keyboardVolume = 1;
 
+	public bool spooky = false;
+
 	public void PlayKeySound () {
-		PlaySound(keySounds[Random.Range(0, keySounds.Count)], keyboardVolume);
+		if(!spooky)
+			PlaySound(keySounds[Random.Range(0, keySounds.Count)], keyboardVolume);
+		else
+			PlaySound(spookyKeySounds[Random.Range(0, spookyKeySounds.Count)], keyboardVolume);
+	}
+
+	public void PlaySpookyKeySound()
+	{
+		PlaySound(keySounds[Random.Range(0, spookyKeySounds.Count)], keyboardVolume);
 	}
 
 	public void PlayAttachingPaperSound () {
