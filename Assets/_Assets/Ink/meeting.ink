@@ -118,7 +118,7 @@ VAR DEBUG = true
     -   -> meetingtwo
         
 === meetingtwo
-#Filename=WorshipTheOldOnes_13Sep2018.doc #SetTime=◬◭◬◭:◭◭pm #SetDate=Җѯ/ѳԓ/Ԇӂӂӭ
+#Filename=WorshipTheOldOnes_13Sep2018.doc #SetTime=◬◭:◭◭pm #SetDate=Җѯ/ѳԓ/Ԇӂӂӭ
 #SetSeal=1
     -   The following minutes were taken at the regular monthly meeting of the Mayor and the Town Board on 13 September 2018 at the Town Hall in Poimena, Tasmania. 
         Mayor Van Zetten called the meeting to order at 7:16pm - Waning Crescent. 
