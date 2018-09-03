@@ -30,11 +30,11 @@ public class AudioClipDatabase : MonoSingleton<AudioClipDatabase> {
 	}
 
 	public void PlayAttachingPaperSound () {
-		PlaySound(attachingPaperSound);
+		//PlaySound(attachingPaperSound);
 	}
 
 	public void PlayHorrorSting () {
-		PlaySound(horrorSting);
+		//PlaySound(horrorSting);
 	}
 
 	public void PlaySanityIncrease()
