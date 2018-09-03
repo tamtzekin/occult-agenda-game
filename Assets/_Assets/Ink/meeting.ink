@@ -5,20 +5,20 @@ VAR insanity = 0
 VAR dictionary = false
 VAR fontpack = false
 VAR photocopies = false
-VAR thesaurus = false 
+// VAR thesaurus = false 
 
 // Character status 
 VAR constabletaken = false
 VAR mayortaken = false 
 
 // Debug mode
-VAR DEBUG = false
+VAR DEBUG = true
 {DEBUG:
-        \-----IN DEBUG MODE-----
+        \☣☣☣ DEBUG MODE ☣☣☣   
         *   [First Quarter...] -> meetingone
         *   [Waning Crescent...] -> meetingtwo
         *   [Full Moon...] -> meetingthree
-        *   [Endings...] -> endinghandler
+        *   [All endings...] -> endinghandler
     - else:
         -> meetingone
 }
@@ -32,6 +32,7 @@ VAR DEBUG = false
 
 === meetingone
 #Filename=Poimena_Minutes_01Sep2018.doc #SetTime: 7:01pm #SetDate: 01/09/2018
+#SetSeal=0
 // Intro
     -   The following minutes were taken at the regular monthly meeting of the Mayor and the Town Board on 1 September 2018 at the Town Hall in 
         *   Poimena[], Tasmania. 
@@ -118,6 +119,7 @@ VAR DEBUG = false
         
 === meetingtwo
 #Filename=WorshipTheOldOnes_13Sep2018.doc #SetTime=◬◭◬◭:◭◭pm #SetDate=Җѯ/ѳԓ/Ԇӂӂӭ
+#SetSeal=1
     -   The following minutes were taken at the regular monthly meeting of the Mayor and the Town Board on 13 September 2018 at the Town Hall in Poimena, Tasmania. 
         Mayor Van Zetten called the meeting to order at 7:16pm - Waning Crescent. 
         He apologised for his lateness{insanity < 0:.}{insanity > 0:, as an Old One that had taken up residence in the the fish pond his backyard needed to be fed.}
@@ -156,7 +158,7 @@ VAR DEBUG = false
                 
         *   [Alicia Marsh] {not mayortaken: When prompted by the Mayor, }Mr. Marsh responded on her behalf however acting through Ms. Marsh as translator. It seemed as if when Ms. Marsh was translating the Old Language for Mr. Marsh, she was unable to speak for herself. Ms. Marsh's partner, who was in the audience, stood up and replied that "this was something she always did, no big deal."
             ** [Clarify] Minutetaker Olmstead asked Ms. Marsh to clarify. 
-                {not mayortaken: The Mayor asked Ms. Marsh about the}{mayortaken:Ms. Marsh clarified the} complaint that was made on 1 September, 1887 (NB. check date against records?). The issue pertained to the unavailability of the quality of {insanity > 0: raw cow}meat available in previous Pacts made. At the time, Ms. Marsh noted that 
+                {not mayortaken: The Mayor asked Ms. Marsh about the}{mayortaken:Ms. Marsh clarified the} complaint that was made on 1 September, 1887 (NB. check date against records?). The issue pertained to the unavailability of the quality of {insanity > 0: raw cow }meat available in previous Pacts made. At the time, Ms. Marsh noted that 
                 ***  the Pact required fresh meat[] for its success.
                     Ms. Marsh did not comment on the matter. Motion to ensure fresh livestock available for Pact not passed, postponed until future meetings. 
                     ~ change(insanity, 1)
@@ -184,7 +186,8 @@ VAR DEBUG = false
 
 // Full Moon phase 
 === meetingthree
-#Filename=GOD_HELP_US_ALL_GOD_HELP_US_ALL_GOD_HELP_US_ALL_GOD_HELP_US_ALL_GOD_HELP_US_ALL_GOD_HELP_US_ALL_GOD_HELP_US_ALL_GOD_HELP_US_ALL.doc #SetTime=◭◬◬◬:◭◭◬◬pm #SetDate=Җѯ/ѳԓ/Ԇӂӂӭ
+#Filename=G☺D_HELP_US_ALL_G☺D_HELP_US_ALL_G☺D_HELP_US_ALL_G☺D_HELP_US_ALL_G☺D_HELP_US_ALL_G☺D_HELP_US_ALL.doc #SetTime=☺☺:☺☺pm #SetDate=☺☺/☺☺/☺☺☺☺
+#SetSeal=2
     -   The following minutes were taken at the regular monthly meeting of the Mayor, the Town Board, {insanity > 0:and the Emissaries of Dagon} on 23 September 2018 at the Town Hall in Poimena, Tasmania. 
         {not mayortaken:Mayor Van Zetten}{mayortaken: Constable Williamson, standing in for Mayor Van Zetten, who was absent without reason given,}{mayortaken && constabletaken: Ms. Marsh, standing in for Mayor Van Zetten, who was absent without reason given,} called the meeting to order at 
         *   7.01pm[] - Full Moon.
@@ -194,6 +197,7 @@ VAR DEBUG = false
     -   -> startpact
     
 === startpact
+#SetSeal=3
         *   [Mayor's announcements]MAYOR'S ANNOUNCEMENTS:
             {not mayortaken:The Mayor}{mayortaken: Constable Williamson}{mayortaken && constabletaken: Ms. Marsh} announced that the New Pact would commence at today's meeting. 
             The opening address of the New Pact was spoken by {not constabletaken:Constable Williamson}{constabletaken:Ms. Marsh}, while the next phases were written down by Minutetaker Olmstead:
@@ -211,7 +215,7 @@ VAR DEBUG = false
             ~ change(insanity, 1)
             // "In his house at Blue Tier Plateau dead Pht'thya-l'y lies dreaming"
 
-        *   {dictionary && fontpack}[In her house at Blue Tier Plateau dead Pht'thya-l'y lies in eternal nightmare.]
+        *   {dictionary && fontpack && photocopies}[In her house at Blue Tier Plateau dead Pht'thya-l'y lies in eternal nightmare.]IN HER HOUSE AT BLUE TIER PLATEAU DIED PHT'THYA-L'Y LIES IN ETERNAL NIGHTMARE.
             ~ change(insanity, -1)
             
     - (summontwo)
@@ -221,7 +225,7 @@ VAR DEBUG = false
             Mr. Marsh urged Minutetaker Olmstead to continue with the ritual before the Mayor traversed into a different plane.
             ~ change(insanity, 1)
 
-        *   {dictionary && fontpack} [Pht'thya-l'y sleeps and waits, we rescind our prayers and silence it eternally.]PHT'THYA-L'Y SLEEPS AND WAITS, WE RESCIND OUR PRAYERS AND SILENCE IT ETERNALLY.            
+        *   {dictionary && fontpack && photocopies} [Pht'thya-l'y sleeps and waits, we rescind our prayers and silence it eternally.]PHT'THYA-L'Y SLEEPS AND WAITS, WE RESCIND OUR PRAYERS AND SILENCE IT ETERNALLY.            
             ~ change(insanity, -1)
 
         *   Mglw'nafh fhthagn-ngah cf'ayak 'vulgtmm vugtlag'n[].
@@ -230,7 +234,7 @@ VAR DEBUG = false
 
 
     - (summonthree)
-        *   {dictionary && fontpack}[The Old Ones are forgotten by the people of Poimena. Pht'thya-l'y will sink to sleep eternal. Pht'thya-l'y is forgotten.]THE OLD ONES ARE FORGOTTEN BY THE PEOPLE OF POIMENA. PHT'THYA-L'Y WILL SINK TO SLEEP ETERNAL. PHT'THYA-L'Y IS FORGOTTEN.
+        *   {dictionary && fontpack && photocopies}[The Old Ones are forgotten by the people of Poimena. Pht'thya-l'y will sink to sleep eternal. Pht'thya-l'y is forgotten.]THE OLD ONES ARE FORGOTTEN BY THE PEOPLE OF POIMENA. PHT'THYA-L'Y WILL SINK TO SLEEP ETERNAL. PHT'THYA-L'Y IS FORGOTTEN.
             ~ change(insanity, -1)
 
         *   \(unintelligible)
@@ -245,7 +249,6 @@ VAR DEBUG = false
         *   Ph'nglui mglw'nafh Pht'thya-l'y Poimena n'gha-ghaa naf'lthagn[].
             ~ change(insanity, 1)
             // DEATH "Gone but not forgotten, Pht'thya-l'y sleeps/waits at Poimena, [promising] death to one and all."
-
 
     -   -> endinghandler
     
@@ -270,6 +273,7 @@ VAR DEBUG = false
 /* Worst Ending */ 
 === worstending
 #Filename=policelog_september29.doc
+#SetSeal=0
     -   Police log, 29 September 2018 - Full Moon. 
     -   On September 29, 2018, I, Officer Allen and Officer Waite responded on an emergency 000 call from Poimena. We had been unable to raise Constable Williamson or any of our colleagues at the Poimena Police Department for several hours.
     
@@ -282,6 +286,7 @@ VAR DEBUG = false
 /* Good Ending */
 === goodending 
 #Filename=policelog_september29.doc
+#SetSeal=0
     -   Police log, 29 September 2018 - Waxing Crescent.
     -   On September 29, 2018, I, Officer Allen and Officer Waite responded on a missing persons report in Poimena. Constable Williamson of the local police force briefed us and escorted us around the premises.  
         We found the town was deserted, bar Constable Williamson. As we patrolled the streets we did not see a single soul. The only sign of life in the town was a strange green glow from within the Town Hall. Myself and Officer Waite entered the Town Hall after radioing in our observations from our reconnaissance of the town.
@@ -293,6 +298,7 @@ VAR DEBUG = false
 /* Best Ending */
 === bestending
 #Filename=policelog_september29.doc
+#SetSeal=0
     -   Police log, 29 September 2018 - Waning Gibbous. 
     -   On September 29, 2018, I, Officer Allen and Officer Waite responded on a missing persons report in Poimena. We had been unable to raise Constable Williamson or any of our colleagues at the Poimena Police Department for several hours.
         On arrival in Poimena we found the town was deserted. As we patrolled the streets we did not see a single soul. The only sign of life in the town was a strange green glow from within the Town Hall. Myself and Officer Waite entered the Town Hall after radioing in our observations from our reconnaissance of the town.
