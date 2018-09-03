@@ -43,6 +43,8 @@ public class GameState : MainState {
 
 	[SerializeField] Text dateText;
 
+	[SerializeField] Sprite[] sealImages;
+
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
@@ -175,6 +177,11 @@ public class GameState : MainState {
 						if (tagValue[0] == "SetDate")
 						{
 							dateText.text = tagValue[1];
+						}
+						if (tagValue[0] == "SetSeal")
+						{
+							int index = int.Parse(tagValue[1]);
+							contentManager.sealImage.sprite = sealImages[index];
 						}
 					}
 				}

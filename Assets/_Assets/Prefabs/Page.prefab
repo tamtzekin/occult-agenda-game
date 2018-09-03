@@ -379,6 +379,7 @@ MonoBehaviour:
   minY: 0
   maxY: 0
   paperImage: {fileID: 114995388729327694}
+  sealImage: {fileID: 114063191696287596}
   paperTopSpacingCanvasHeightFraction: 0.2
   paperBottomSpacingCanvasHeightFraction: 0.25
   paperBottomOffset: 140

@@ -5019,6 +5019,11 @@ MonoBehaviour:
   filenameText: {fileID: 990824287}
   timeText: {fileID: 845564216}
   dateText: {fileID: 707484971}
+  sealImages:
+  - {fileID: 21300000, guid: 6b2653131391a2a4aac9686e105657f7, type: 3}
+  - {fileID: 21300000, guid: 39ee8e4f1312ac74ca03b3c99e8315cb, type: 3}
+  - {fileID: 21300000, guid: c79b3dc1a2d580d498b2d088ed94d9a4, type: 3}
+  - {fileID: 21300000, guid: d65a016d777cb7e4799085de994c8170, type: 3}
 --- !u!1 &2112336365
 GameObject:
   m_ObjectHideFlags: 0
