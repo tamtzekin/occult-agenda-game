@@ -110,6 +110,13 @@ public class GameState : MainState {
 		contentParent = contentManager.layoutGroup.transform;
 		StartCoroutine(OnAdvanceStory());
 
+		if (meetingName.Equals("meetingthree"))
+		{
+			Debug.Log("Meeting Three");
+			FindObjectOfType<BackgroundAmbienceController>().QuietMode();
+			GameObject.Find("PactAudio").GetComponent<AudioSource>().Play();
+		}
+
 		FloatTween fadeInTween = new FloatTween();
 		fadeInTween.Tween(1, 0, 2);
 		while (fadeInTween.tweening)
