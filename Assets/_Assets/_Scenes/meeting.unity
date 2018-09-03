@@ -2351,7 +2351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: THE INTERCEPT
+  m_Text: OCCULT AGENDA
 --- !u!114 &1003711404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62969df608484908859668afc3e4e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: INK JAM GAME
+  content: OCCULT AGENDA
   letterTypeTime: {x: 0.23, y: 0.27}
 --- !u!222 &1003711405
 CanvasRenderer:
