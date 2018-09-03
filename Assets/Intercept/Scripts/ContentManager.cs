@@ -27,6 +27,8 @@ public class ContentManager : UIMonoBehaviour, IBeginDragHandler {
 
 	public Image paperImage;
 
+	public Image sealImage;
+
 	public float paperTopSpacingCanvasHeightFraction = 0.2f;
 	public float paperBottomSpacingCanvasHeightFraction = 0.25f;
 	public int paperBottomOffset = 100;

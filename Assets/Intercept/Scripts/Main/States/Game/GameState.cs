@@ -33,6 +33,8 @@ public class GameState : MainState {
 
     public Transform pagePrefab;
 
+	[SerializeField] Transform policePagePrefab;
+
     Transform currentPage;
 
 	int previousSanityValue = 0;
@@ -43,10 +45,12 @@ public class GameState : MainState {
 
 	[SerializeField] Text dateText;
 
+	[SerializeField] Sprite[] sealImages;
+
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
-		settingsButton.Hide();
+		//settingsButton.Hide();
 	}
 
 	public override void Enter () {
@@ -54,12 +58,12 @@ public class GameState : MainState {
 
 		currentPage = GameObject.Instantiate<Transform>(pagePrefab);
 		currentPage.transform.SetParent(GameObject.Find("Game Canvas").transform, false);
-		currentPage.transform.SetSiblingIndex(1);
+		currentPage.transform.SetSiblingIndex(2);
 		contentManager = currentPage.GetComponentInChildren<ContentManager>();
 		contentParent = contentManager.layoutGroup.transform;
 
 		contentManager.enabled = true;
-		settingsButton.FadeIn();
+		//settingsButton.FadeIn();
 
 		if(storyJSON == null) {
 			Debug.LogWarning("Drag a valid story JSON file into the StoryReader component.");
@@ -87,7 +91,7 @@ public class GameState : MainState {
 		});
 	}
 
-	private IEnumerator FadeBetweenMeetings(string meetingName)
+	private IEnumerator FadeBetweenMeetings(string meetingName, Boolean ending = false)
 	{
 		CanvasGroup fadeCanvasGroup = Main.Instance.introState.group;
 
@@ -112,8 +116,18 @@ public class GameState : MainState {
 
 		currentPage.gameObject.SetActive(false);
 		story.ChoosePathString(meetingName);
-		currentPage = GameObject.Instantiate<Transform>(pagePrefab, GameObject.Find("Game Canvas").transform, false);
-		currentPage.transform.SetSiblingIndex(1);
+		if (!ending)
+		{
+			currentPage = GameObject.Instantiate<Transform>(pagePrefab, GameObject.Find("Game Canvas").transform, false);
+		}
+		else
+		{
+			currentPage = GameObject.Instantiate<Transform>(policePagePrefab, GameObject.Find("Game Canvas").transform, false);
+			GameObject.Find("Background").SetActive(false);
+			GameObject.Find("DateTime").SetActive(false);
+			GameObject.Find("TopBar").SetActive(false);
+		}
+		currentPage.transform.SetSiblingIndex(2);
 		contentManager = currentPage.GetComponentInChildren<ContentManager>();
 		contentParent = contentManager.layoutGroup.transform;
 		StartCoroutine(OnAdvanceStory());
@@ -176,6 +190,11 @@ public class GameState : MainState {
 						{
 							dateText.text = tagValue[1];
 						}
+						if (tagValue[0] == "SetSeal")
+						{
+							int index = int.Parse(tagValue[1]);
+							contentManager.sealImage.sprite = sealImages[index];
+						}
 					}
 				}
 				if (content.Length > 0)
@@ -215,6 +234,12 @@ public class GameState : MainState {
 						{
 							Debug.Log("Trying to go to " + tagValue[1]);
 							StartCoroutine(FadeBetweenMeetings(tagValue[1]));
+							foundMeeting = true;
+						}
+						if (tagValue[0] == "Ending")
+						{
+							Debug.Log("Trying to go to " + tagValue[1]);
+							StartCoroutine(FadeBetweenMeetings(tagValue[1], true));
 							foundMeeting = true;
 						}
 					}
