@@ -215,7 +215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &55078432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -705,7 +705,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: acd5ec74ebbd9484bba2394cfce7ebfe, type: 3}
+    m_Font: {fileID: 12800000, guid: f0ea51714fef7c343841775d16c08a6c, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -1450,7 +1450,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: acd5ec74ebbd9484bba2394cfce7ebfe, type: 3}
+    m_Font: {fileID: 12800000, guid: f0ea51714fef7c343841775d16c08a6c, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 796198951}
   - component: {fileID: 796198950}
   m_Layer: 5
-  m_Name: INKLE PRESENTS
+  m_Name: AN INK JAM GAME
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2256,7 +2256,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: acd5ec74ebbd9484bba2394cfce7ebfe, type: 3}
+    m_Font: {fileID: 12800000, guid: f0ea51714fef7c343841775d16c08a6c, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -2268,7 +2268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INKLE PRESENTS
+  m_Text: AN INK JAM GAME
 --- !u!222 &796198952
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3944,7 +3944,7 @@ GameObject:
   - component: {fileID: 1588716967}
   - component: {fileID: 1588716966}
   m_Layer: 5
-  m_Name: THE INTERCEPT
+  m_Name: OCCULT AGENDA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4000,7 +4000,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: acd5ec74ebbd9484bba2394cfce7ebfe, type: 3}
+    m_Font: {fileID: 12800000, guid: 490a571b0fca31d45a230bad03d14209, type: 3}
     m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
@@ -4012,7 +4012,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: THE INTERCEPT
+  m_Text: OCCULT AGENDA
 --- !u!222 &1588716968
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4034,7 +4034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1645906751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4581,7 +4581,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: acd5ec74ebbd9484bba2394cfce7ebfe, type: 3}
+    m_Font: {fileID: 12800000, guid: f0ea51714fef7c343841775d16c08a6c, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -4593,7 +4593,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: THANKS TO FREESOUND.ORG CONTRIBUTORS
+  m_Text: THANKS INKLE!
 --- !u!222 &1860593297
 CanvasRenderer:
   m_ObjectHideFlags: 0
