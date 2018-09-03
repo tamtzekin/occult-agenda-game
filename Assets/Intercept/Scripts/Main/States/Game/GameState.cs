@@ -48,6 +48,7 @@ public class GameState : MainState {
 
 		currentPage = GameObject.Instantiate<Transform>(pagePrefab);
 		currentPage.transform.SetParent(GameObject.Find("Game Canvas").transform, false);
+		currentPage.transform.SetSiblingIndex(1);
 		contentManager = currentPage.GetComponentInChildren<ContentManager>();
 		contentParent = contentManager.layoutGroup.transform;
 
@@ -106,6 +107,7 @@ public class GameState : MainState {
 		currentPage.gameObject.SetActive(false);
 		story.ChoosePathString(meetingName);
 		currentPage = GameObject.Instantiate<Transform>(pagePrefab, GameObject.Find("Game Canvas").transform, false);
+		currentPage.transform.SetSiblingIndex(1);
 		contentManager = currentPage.GetComponentInChildren<ContentManager>();
 		contentParent = contentManager.layoutGroup.transform;
 		StartCoroutine(OnAdvanceStory());
