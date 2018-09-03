@@ -3186,6 +3186,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 52823deeb3092614585e584ded0940cf, type: 3}
   attachingPaperSound: {fileID: 8300000, guid: 5da4d52db5d764cb68de1d404346ca2e, type: 3}
   horrorSting: {fileID: 8300000, guid: 60f518e7a0ea04dcb9d4c223e9bf9957, type: 3}
+  sanityIncreaseAudio: {fileID: 8300000, guid: 178b9f8a59fe3794d841a5f07d083545, type: 3}
+  sanityDecreaseAudio: {fileID: 8300000, guid: 01336828461505543964ecd6976143c6, type: 3}
   keyboardVolume: 0.2
 --- !u!114 &1392399343
 MonoBehaviour:
