@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-guid: d4b999b67a43c4e42bf0bfdac64ef955
-timeCreated: 1535861818
+guid: 39ee8e4f1312ac74ca03b3c99e8315cb
+timeCreated: 1535933616
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: town_logo_0
-    21300002: town_logo_1
-    21300004: town_logo_2
-    21300006: town_logo_3
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -44,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,63 +98,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: town_logo_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 283.25
-        height: 336
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: town_logo_1
-      rect:
-        serializedVersion: 2
-        x: 283
-        y: 0
-        width: 283.25
-        height: 336
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: town_logo_2
-      rect:
-        serializedVersion: 2
-        x: 566
-        y: 0
-        width: 283.25
-        height: 336
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: town_logo_3
-      rect:
-        serializedVersion: 2
-        x: 849
-        y: 0
-        width: 283.25
-        height: 336
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 
