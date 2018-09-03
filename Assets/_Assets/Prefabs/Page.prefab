@@ -307,7 +307,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LAUNCESTON COUNCIL
+  m_Text: POIMENA COUNCIL
 --- !u!114 &114774875138350572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -362,7 +362,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Westgate St, Launceston PL15 7AR, UK
+  m_Text: O'Reilly Street
 --- !u!114 &114972823450289186
 MonoBehaviour:
   m_ObjectHideFlags: 1
