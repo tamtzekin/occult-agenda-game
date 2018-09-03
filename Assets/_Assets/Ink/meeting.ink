@@ -1,3 +1,24 @@
+/* 
+
+GAME TITLE:
+Occult Agenda 
+
+DESCRIPTION:
+There's something festering within the quaint Australian town of Pomeina, Tasmania. But, great news—you've been appointed the new town hall Minutetaker!
+
+CREDITS:
+Game concept & design: James McHugh, Justin Tam
+Programming: James McHugh
+Art: @wraith_ly
+Writing: James McHugh, Justin Tam
+Music & sound: Justin Tam
+
+For InkJam 2018
+Made with Ink by Inkle 
+www.inklestudios.com 
+
+*/
+
 // Insanity state
 VAR insanity = 0
 
@@ -12,7 +33,7 @@ VAR constabletaken = false
 VAR mayortaken = false 
 
 // Debug mode
-VAR DEBUG = true
+VAR DEBUG = false
 {DEBUG:
         \☣☣☣ DEBUG MODE ☣☣☣   
         *   [First Quarter...] -> meetingone
@@ -194,7 +215,7 @@ VAR DEBUG = true
         
         *   11111.1111111pm[] - Full Moon.
         
-    -   -> startpact
+    -   -> startpact    
     
 === startpact
 #SetSeal=3
@@ -232,7 +253,6 @@ VAR DEBUG = true
             ~ change(insanity, 1)
             // "[It] sleeps/waits and then acts, we send [our] prayers [to thee], answer [us]"
 
-
     - (summonthree)
         *   {dictionary && fontpack && photocopies}[The Old Ones are forgotten by the people of Poimena. Pht'thya-l'y will sink to sleep eternal. Pht'thya-l'y is forgotten.]THE OLD ONES ARE FORGOTTEN BY THE PEOPLE OF POIMENA. PHT'THYA-L'Y WILL SINK TO SLEEP ETERNAL. PHT'THYA-L'Y IS FORGOTTEN.
             ~ change(insanity, -1)
@@ -255,19 +275,24 @@ VAR DEBUG = true
 === endinghandler
 {   
     -   insanity > 0 && constabletaken && mayortaken:
-        -> worstending
-
+        #Ending=worstending
+        -> DONE
+        
     -   insanity > 0 && constabletaken || mayortaken:
-        -> worstending //badending
-
+        #Ending=worstending
+        -> DONE
+        
     -   insanity < 0 && not constabletaken || not mayortaken:
-        ->  goodending
+        #Ending=goodending
+        -> DONE
         
     -   insanity < 0 && not constabletaken && not mayortaken:
-        -> bestending
+        #Ending=bestending
+        -> DONE
     
     -   else:
-        -> worstending
+        #Ending=worstending
+        -> DONE
 }
 
 /* Worst Ending */ 
@@ -276,10 +301,9 @@ VAR DEBUG = true
 #SetSeal=0
     -   Police log, 29 September 2018 - Full Moon. 
     -   On September 29, 2018, I, Officer Allen and Officer Waite responded on an emergency 000 call from Poimena. We had been unable to raise Constable Williamson or any of our colleagues at the Poimena Police Department for several hours.
-    
         Upon arrival we noted that there was no significant emergency in Poimena. The Mayor of the town, Albert Van Zetten, met us at the Town Hall. He informed us that the "Old Ones" were once again "satisfied", and that their town would be safe for "the next ten thousand years until a new pact was to be formed." 
         Officer Allen noticed a green glow coming from within the Town Hall. When asked, Mayor Van Zetten informed us a party sanctioned by the local police force was being conducted on the premises. 
-        The Mayor provided minutes from the most recent Town Hall meeting upon our request. The documents were written in an indistinguishable language, perhaps Chinese or another ethno-Asian dialect. We requested to speak with Minutetaker Olmstead in question, however Mayor Van Zetten was unable to comment.
+        The Mayor provided minutes from the most recent Town Hall meeting upon our request. The documents were written in an indistinguishable language, perhaps Chinese or another ethno-Asian dialect. We requested to speak with Minutetaker Olmstead in question, however Mayor Van Zetten was unable to comment. He repeated one phrase, "It's not what you think," and walked off. 
         The Old Ones continue to rule this town. 
     -> END
     
@@ -291,8 +315,10 @@ VAR DEBUG = true
     -   On September 29, 2018, I, Officer Allen and Officer Waite responded on a missing persons report in Poimena. Constable Williamson of the local police force briefed us and escorted us around the premises.  
         We found the town was deserted, bar Constable Williamson. As we patrolled the streets we did not see a single soul. The only sign of life in the town was a strange green glow from within the Town Hall. Myself and Officer Waite entered the Town Hall after radioing in our observations from our reconnaissance of the town.
         We could not trace the glow to a source - it seemed as if the air itself was emitting this uncanny luminescence. With some trepidation we continued further into the building. We found the the Council Chambers in complete disarray. Chairs were overturned, paintings were slashed and a smell like permeated the room. The meeting room table floated in the middle of the room turning slowly. We could not determine how it was suspended in the air.
-        At this point, Constable Williamson remarked: "The ritual was completed, but they will come back for me." He trailed off and continued to utter the phrase as he paced the room.
-        In the corner of the room underneath the minutetaker's table we found these Minutes of the recent Town Meetings. If what they say is true, something terrible has happened here...
+        At this point, Constable Williamson remarked: "The ritual was completed, but they will come back for me." He trailed off and continued to utter the phrase as he paced the room. 
+        In the corner of the room underneath the minutetaker's table we found these Minutes of the recent Town Meetings. 
+        Scrawled at the based of the note, in pen: "It's not what you think." 
+        If what they say is true, something terrible has happened here...
     -> END 
 
 /* Best Ending */
@@ -303,5 +329,7 @@ VAR DEBUG = true
     -   On September 29, 2018, I, Officer Allen and Officer Waite responded on a missing persons report in Poimena. We had been unable to raise Constable Williamson or any of our colleagues at the Poimena Police Department for several hours.
         On arrival in Poimena we found the town was deserted. As we patrolled the streets we did not see a single soul. The only sign of life in the town was a strange green glow from within the Town Hall. Myself and Officer Waite entered the Town Hall after radioing in our observations from our reconnaissance of the town.
         We could not trace the glow to a source - it seemed as if the air itself was emitting this uncanny luminescence. With some trepidation we continued further into the building. We found the the Council Chambers in complete disarray. Chairs were overturned, paintings were slashed and a smell like permeated the room. The meeting room table floated in the middle of the room turning slowly. We could not determine how it was suspended in the air.
-        In the corner of the room underneath the minutetaker's table we found these Minutes of the recent Town Meetings. If what they say is true, something terrible has happened here...
+        In the corner of the room underneath the minutetaker's table we found these Minutes of the recent Town Meetings. 
+        Scrawled at the based of the note, in pen: "It's not what you think." 
+        If what they say is true, something terrible has happened here...
     -> END
