@@ -46,7 +46,7 @@ public class GameState : MainState {
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
-		settingsButton.Hide();
+		//settingsButton.Hide();
 	}
 
 	public override void Enter () {
@@ -59,7 +59,7 @@ public class GameState : MainState {
 		contentParent = contentManager.layoutGroup.transform;
 
 		contentManager.enabled = true;
-		settingsButton.FadeIn();
+		//settingsButton.FadeIn();
 
 		if(storyJSON == null) {
 			Debug.LogWarning("Drag a valid story JSON file into the StoryReader component.");
