@@ -3173,17 +3173,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keySounds:
-  - {fileID: 8300000, guid: 0da19f8e7731c054b94b2aac4ee8d702, type: 3}
-  - {fileID: 8300000, guid: acb5a1adf2391c24ab898c95d32f9a3e, type: 3}
-  - {fileID: 8300000, guid: b36422143429af54791147cd4e5702b9, type: 3}
-  - {fileID: 8300000, guid: 60eeb3ce65467474e8a9943e5cb4e50c, type: 3}
-  - {fileID: 8300000, guid: ef28c60d8d8a2064fbd306a93a9bb5a6, type: 3}
-  - {fileID: 8300000, guid: e44fde03d25821b428bb7bcfaf90c205, type: 3}
-  - {fileID: 8300000, guid: b5b70a59fa10f3e42a00e68e17f797b9, type: 3}
-  - {fileID: 8300000, guid: c6db2417b7a96354fb63c58d9bbfc141, type: 3}
-  - {fileID: 8300000, guid: 4c8277522c2745a41b4cc26985830767, type: 3}
-  - {fileID: 8300000, guid: e741761dd81b43f4cbe9f4c6c5a14a91, type: 3}
-  - {fileID: 8300000, guid: 52823deeb3092614585e584ded0940cf, type: 3}
+  - {fileID: 8300000, guid: 713f7a2f29801c8468d1f98b3531fd1e, type: 3}
+  - {fileID: 8300000, guid: ee646362e394b6942b14b4f5969830f3, type: 3}
+  - {fileID: 8300000, guid: b8587170a8b867a4a8c786e2bdd2a6af, type: 3}
+  - {fileID: 8300000, guid: d7186fa0f4a782345a5a8ed7ce0ecf61, type: 3}
+  - {fileID: 8300000, guid: f464c9b1aad03944da1a1e3f67cb06da, type: 3}
+  - {fileID: 8300000, guid: bf363dc065868964ea7a9a704e400849, type: 3}
+  - {fileID: 8300000, guid: cd76c05e47904cb49b4178d52917813f, type: 3}
+  - {fileID: 8300000, guid: 874b6a7d6084c8d448c55b4bbf749c14, type: 3}
+  - {fileID: 8300000, guid: 3c26fa89713fc0a4b85867b0978fb9e7, type: 3}
+  - {fileID: 8300000, guid: e877c4607f4c13e4395f94e6d04b7bfa, type: 3}
+  - {fileID: 8300000, guid: d0e040b2baa8ef94d993534c70780d2c, type: 3}
   attachingPaperSound: {fileID: 8300000, guid: 5da4d52db5d764cb68de1d404346ca2e, type: 3}
   horrorSting: {fileID: 8300000, guid: 60f518e7a0ea04dcb9d4c223e9bf9957, type: 3}
   sanityIncreaseAudio: {fileID: 8300000, guid: 178b9f8a59fe3794d841a5f07d083545, type: 3}
