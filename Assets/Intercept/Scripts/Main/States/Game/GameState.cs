@@ -39,6 +39,10 @@ public class GameState : MainState {
 
 	public Text filenameText;
 
+	[SerializeField] Text timeText;
+
+	[SerializeField] Text dateText;
+
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
@@ -163,6 +167,14 @@ public class GameState : MainState {
 						if (tagValue[0] == "Filename")
 						{
 							filenameText.text = tagValue[1];
+						}
+						if (tagValue[0] == "SetTime")
+						{
+							timeText.text = tagValue[1];
+						}
+						if (tagValue[0] == "SetDate")
+						{
+							dateText.text = tagValue[1];
 						}
 					}
 				}
