@@ -2521,7 +2521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7e041607c3142509fd6239564485f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quietVolume: 0.125
+  quietVolume: 0
   normalVolume: 0.25
 --- !u!82 &1088312510
 AudioSource:
