@@ -4,6 +4,7 @@ using System.Collections;
 public class EndRestartButton : MonoBehaviour {
 
 	public void OnClickRestartButton () {
-		Main.Instance.endState.Complete();
+		Application.LoadLevel(0);
+		//Main.Instance.endState.Complete();
 	}
 }
