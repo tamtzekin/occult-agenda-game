@@ -217,6 +217,20 @@ public class GameState : MainState {
 					if (story.canContinue)
 						yield return new WaitForSeconds(Mathf.Min(1.0f, contentView.textTyper.targetText.Length * 0.01f));
 				}
+				else
+				{
+					if (!story.canContinue)
+					{
+						if (story.currentChoices.Count > 0)
+						{
+							choiceView = CreateChoiceGroupView(story.currentChoices);
+						}
+						else
+						{
+							//chevronView = CreateChevronView();
+						}
+					}
+				}
 			}
 			if(story.currentChoices.Count > 0) {
 				yield return new WaitForSeconds(1f);
