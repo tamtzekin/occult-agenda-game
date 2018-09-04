@@ -24,10 +24,10 @@ public class Main : MonoSingleton<Main> {
 			Time.timeScale = _paused ? 0 : 1;
 			if(paused) {
 				gameState.settingsView.Show();
-				backgroundAmbienceController.QuietMode();
+				//backgroundAmbienceController.QuietMode();
 			} else {
 				gameState.settingsView.Hide();
-				backgroundAmbienceController.NormalMode();
+				//backgroundAmbienceController.NormalMode();
 			}
 		}
 	}
