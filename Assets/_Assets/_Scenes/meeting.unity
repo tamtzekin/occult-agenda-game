@@ -1764,7 +1764,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HUMFREY
+  m_Text: WORDS
 --- !u!222 &518908697
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3405,7 +3405,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INGOLD
+  m_Text: CODE
 --- !u!222 &1130509391
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5296,7 +5296,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: KAIL
+  m_Text: ART
 --- !u!222 &1949449616
 CanvasRenderer:
   m_ObjectHideFlags: 0
