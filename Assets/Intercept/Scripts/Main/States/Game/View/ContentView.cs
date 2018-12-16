@@ -9,6 +9,8 @@ public class ContentView : StoryElementView {
 	public Color driedColor;
 	public Color wetColor;
 
+	string startText;
+
 	protected override void Awake () {
 		textTyper = new TypedText();
 		text.color = wetColor;
@@ -53,6 +55,42 @@ public class ContentView : StoryElementView {
 		text.text = richText.Substring(0, textTyper.text.Length);
 		if(newText != " ")
 			AudioClipDatabase.Instance.PlayKeySound ();
+	}
+
+	public void AppendText(string content)
+	{
+		base.LayoutText(content);
+
+		TypedText.TypedTextSettings textTyperSettings = new TypedText.TypedTextSettings();
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(",", new TypedText.RandomTimeDelay(0.075f, 0.1f)));
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(":", new TypedText.RandomTimeDelay(0.125f, 0.175f)));
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay("-", new TypedText.RandomTimeDelay(0.125f, 0.175f)));
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(".", new TypedText.RandomTimeDelay(0.3f, 0.4f)));
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay("\n", new TypedText.RandomTimeDelay(0.5f, 0.6f)));
+		if (Main.Instance.gameState.hasMadeAChoice)
+		{
+			textTyperSettings.splitMode = TypedText.TypedTextSettings.SplitMode.Word;
+			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.04f, 0.065f);
+		}
+		else
+		{
+			textTyperSettings.splitMode = TypedText.TypedTextSettings.SplitMode.Character;
+			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.03f, 0.0425f);
+		}
+
+		startText = text.text;
+		richText = new RichTextSubstring(content);
+		textTyper = new TypedText();
+		textTyper.OnTypeText += OnAppendText;
+		textTyper.OnCompleteTyping += CompleteTyping;
+		textTyper.TypeText(richText.plainText, textTyperSettings);
+	}
+
+	void OnAppendText(string newText)
+	{
+		text.text = startText + " " + richText.Substring(0, textTyper.text.Length);
+		if (newText != " ")
+			AudioClipDatabase.Instance.PlayKeySound();
 	}
 
 	protected override void CompleteTyping () {

@@ -173,6 +173,7 @@ public class GameState : MainState {
 			ChevronButtonView chevronView = null;
 			while(story.canContinue) {
 				string content = story.Continue().Trim();
+				bool append = false;
 				foreach (String tag in story.currentTags)
 				{
 					if (tag.Contains("="))
@@ -196,10 +197,26 @@ public class GameState : MainState {
 							contentManager.sealImage.sprite = sealImages[index];
 						}
 					}
+					else
+					{
+						if (tag == "Append")
+						{
+							append = true;
+						}
+					}
 				}
 				if (content.Length > 0)
 				{
-					ContentView contentView = CreateContentView(content);
+					ContentView contentView;
+					if(!append)
+					{
+						contentView = CreateContentView(content);
+					}
+					else
+					{
+						contentView = AppendToLastContentView(content);
+					}
+					
 					if (!story.canContinue)
 					{
 						if (story.currentChoices.Count > 0)
@@ -286,6 +303,14 @@ public class GameState : MainState {
 
 	public void ClickChevronButton () {
 		Complete();
+	}
+
+	ContentView AppendToLastContentView(string content)
+	{
+		Transform lastChildTransform = contentParent.transform.GetChild(contentParent.transform.childCount - 2);
+		ContentView contentView = lastChildTransform.GetComponent<ContentView>();
+		contentView.AppendText(content);
+		return contentView;
 	}
 
 	ContentView CreateContentView (string content) {
