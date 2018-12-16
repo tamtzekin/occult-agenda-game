@@ -52,7 +52,7 @@ VAR DEBUG = false
 // GAME STARTS HERE
 
 === meetingone
-#Filename=Poimena_Minutes_01Sep2018.doc #SetTime:7:01pm #SetDate:01/09/2018
+#Filename=Poimena_Minutes_01Sep2018.doc #SetTime=7:01pm #SetDate=01/09/2018
 #SetSeal=0
 // Intro
     -   The following minutes were taken at the regular monthly meeting of the Mayor and the Town Board on 1 September 2018 at the Town Hall in 
