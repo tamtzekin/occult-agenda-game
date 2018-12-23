@@ -59,7 +59,7 @@ public class ContentView : StoryElementView {
 
 	public void AppendText(string content)
 	{
-		base.LayoutText(content);
+		base.LayoutText(text.text + " " + content);
 
 		TypedText.TypedTextSettings textTyperSettings = new TypedText.TypedTextSettings();
 		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(",", new TypedText.RandomTimeDelay(0.075f, 0.1f)));
