@@ -56,7 +56,7 @@ VAR DEBUG = false
 #SetSeal=0
 // Intro
     -   The following minutes were taken at the regular monthly meeting of the Mayor and the Town Board on 1 September 2018 at the Town Hall in 
-        *   Poimena[], Tasmania. 
+        *   Poimena[], Tasmania. #Append
         Mayor Van Zetten called the meeting to order at 7:01pm - First Quarter.
     
     - (mayor)
@@ -77,7 +77,7 @@ VAR DEBUG = false
     
     -   (agendaone)
         The {first|second|third|final|-> endagendaone} item on the agenda was addressed by
-        *   [The Mayor] Mayor Van Zetten, who noted the ongoing works in the town's sewerage system. An attendee asked about the liquid that had been appearing in their home's faucets, which was said to cause sweats and mild hallucinations for anyone who drank the water. 
+        *   [The Mayor] Mayor Van Zetten, who noted the ongoing works in the town's sewerage system. An attendee asked about the liquid that had been appearing in their home's faucets, which was said to cause sweats and mild hallucinations for anyone who drank the water.#Append
             **  [Clarify] The Mayor explained that the "visitor" that had existed beneath the town for thousands (fact check?) of years had affected the quality of the town's water supply to be beneath an acceptable standard, and thanked the gentleman for his patience and understanding.
                 ~ change(insanity, 1)
                 *** [Clarify further] Ms. Marsh interrupted and reminded the meeting that there were other matters on the agenda.
@@ -86,21 +86,21 @@ VAR DEBUG = false
 
             **  [Leave it] The Mayor thanked the gentleman for his patience and understanding.
     
-        *   Jim Williamson[]. Constable Williamson reported that he received complaints from homeowners that they had seen "unsettling" rubbish appearing in their backyard, as well as
-            **  [beer bottles]"beer bottles" scattered around their property. No further delinquent activity was reported.
+        *   Jim Williamson[]. Constable Williamson reported that he received complaints from homeowners that they had seen "unsettling" rubbish appearing in their backyard, as well as #Append
+            **  [beer bottles]"beer bottles" scattered around their property. No further delinquent activity was reported.#Append
                 ~ change(insanity, -1)
                 
-            **  [the skin of small animals such as rabbits]{insanity > 0: "the skin of small animals such as rabbits", stained by dried blood and splayed out in runic patterns across their front lawns and emitting a terrible stench.}{insanity < 0: "the skin of small animals such as rabbits" being laid in patterns across their front lawns.}
+            **  [the skin of small animals such as rabbits]{insanity > 0: "the skin of small animals such as rabbits", stained by dried blood and splayed out in runic patterns across their front lawns and emitting a terrible stench.}{insanity < 0: "the skin of small animals such as rabbits" being laid in patterns across their front lawns.}#Append
                 ~ change(insanity, 1)
                 
                 Upon further inspection he noted their gardens were dug up and 
-                *** [graffiti]"graffiti" was found on the outside walls of their homes.
+                *** [graffiti]"graffiti" was found on the outside walls of their homes.#Append
                     ~ change(insanity, -1)
                     **** [Clarify] The Constable noted that the graffiti was in orange spraypaint. 
                     ~ change(insanity, -1)
                     **** [Next item]
                     
-                *** [strange markings]"strange markings" were left against their garage doors{insanity > 0: arranged in words of a non-linear alphabet.}{insanity < 0:.} 
+                *** [strange markings]"strange markings" were left against their garage doors{insanity > 0: arranged in words of a non-linear alphabet.}{insanity < 0:.}#Append
                     The Constable requested that if the old rituals are to be continued they be taken elsewhere. Constable Williamson added he "preferred the previous Old One(s)" because "they kept it clean, at least." 
                         ~ change(insanity, 1)
                     ****    [Clarify]Mayor Van Zetten reminded Minutetaker Olmstead that it was not his place to comment on agenda matters. Constable Williamson said answered anyway, and said the markings were identified as an old language only communicated by visual, non-linear means. 
@@ -108,7 +108,7 @@ VAR DEBUG = false
                         ~ constabletaken = true
                     ****    [Next item]
                        
-        *   Alicia Marsh[]. Ms. Marsh addressed the Mayor directly on the minute-keeping. She reminded those in attendance that notes were strictly only to be taken by the assigned Minutekeeper. 
+        *   Alicia Marsh[]. Ms. Marsh addressed the Mayor directly on the minute-keeping. She reminded those in attendance that notes were strictly only to be taken by the assigned Minutekeeper.#Append
             **  [Written notes?] No written notes of any kind were to be taken. Ms. Marsh reminded them this would interrupt the written sigils needed for the New Pact to be conducted.
                 ~ change(insanity, 1)
                 *** [Clarify] Constable Williamson suggested this matter be raised next meeting. All in favour. 
@@ -122,7 +122,7 @@ VAR DEBUG = false
                 *** [Next item]
 
         *   [Barnabas Marsh]
-            the Mayor again. He asked Mr. Marsh if he had any motions to raise. Mr. Marsh did not comment - this was expected behaviour of Mr. Marsh at Town Hall meetings.
+            the Mayor again. He asked Mr. Marsh if he had any motions to raise. Mr. Marsh did not comment - this was expected behaviour of Mr. Marsh at Town Hall meetings.#Append
                 
         *   [No one]
             No further agenda items were raised.
@@ -157,7 +157,7 @@ VAR DEBUG = false
 
     -   (agendatwo)
         The {first|second|third|final|-> endagendatwo} item on the agenda was addressed by
-        *   [The Mayor] Mayor Van Zetten. He reminded the room that they would need to recite the terms of the New Pact in a language the Old Ones could understand. The Mayor said he would be handing out photocopies of additional sigil sheets needed for the ritual at the conclusion the meeting. {insanity >0: When asked, the Mayor said the last copy of the dictionary went up in flames last time it was used.}
+        *   [The Mayor] Mayor Van Zetten. He reminded the room that they would need to recite the terms of the New Pact in a language the Old Ones could understand. The Mayor said he would be handing out photocopies of additional sigil sheets needed for the ritual at the conclusion the meeting. {insanity >0: When asked, the Mayor said the last copy of the dictionary went up in flames last time it was used.} #Append
             **  [Destroy dictionary] Ms. Marsh took the dictionary from Minutetaker Olmstead and asked that they move on from this agenda item. 
                 *** [Clarify further] 
                     The Mayor seemed unable to speak, as if his mouth was glued together. There was fear in his eyes. 
@@ -167,31 +167,31 @@ VAR DEBUG = false
                 
             **  [Next item]
         
-        *   [Barnabas Marsh] Mr. Marsh was awake during this meeting, much to the surprise of the room. 
+        *   [Barnabas Marsh] Mr. Marsh was awake during this meeting, much to the surprise of the room.#Append
             Ms. Alicia Marsh acted as translator between the room and Mr. Marsh. (These Minutes record the translation as it was relayed by Ms. Marsh, however the original transcript in Old Language was not recorded).
             Barnabas stated he represented Pht'thya-l'y (sp?) as Visiting Consul, who sends their apologies for not attending the meeting for the last
-            **  two meetings[]. He apologised again for his absence. 
+            **  two meetings[]. He apologised again for his absence. #Append
                 {insanity > 0: To Minutekeeper Olmstead, his voice sounded like tearing sheet metal.}
                 ~ change(insanity, -1)
                 
-            **  ten thousand years[]. He reminded the room the Old Ones found English difficult as it was "too fast" and therefore indistinguishable. He stressed the importance of learning the language of the Old Ones in order for the New Pact to be renewed. 
+            **  ten thousand years[]. He reminded the room the Old Ones found English difficult as it was "too fast" and therefore indistinguishable. He stressed the importance of learning the language of the Old Ones in order for the New Pact to be renewed. #Append 
                 {insanity > 0: Mr. Marsh levitated as he spoke.}
                 ~ change(insanity, 1)
                 
-        *   [Alicia Marsh] {not mayortaken: When prompted by the Mayor, }Mr. Marsh responded on her behalf however acting through Ms. Marsh as translator. It seemed as if when Ms. Marsh was translating the Old Language for Mr. Marsh, she was unable to speak for herself. Ms. Marsh's partner, who was in the audience, stood up and replied that "this was something she always did, no big deal."
+        *   [Alicia Marsh] {not mayortaken: When prompted by the Mayor, }Mr. Marsh responded on her behalf however acting through Ms. Marsh as translator. It seemed as if when Ms. Marsh was translating the Old Language for Mr. Marsh, she was unable to speak for herself. Ms. Marsh's partner, who was in the audience, stood up and replied that "this was something she always did, no big deal."#Append
             ** [Clarify] Minutetaker Olmstead asked Ms. Marsh to clarify. 
                 {not mayortaken: The Mayor asked Ms. Marsh about the}{mayortaken:Ms. Marsh clarified the} complaint that was made on 1 September, 1887 (NB. check date against records?). The issue pertained to the unavailability of the quality of {insanity > 0: raw cow }meat available in previous Pacts made. At the time, Ms. Marsh noted that 
-                ***  the Pact required fresh meat[] for its success.
+                ***  the Pact required fresh meat[] for its success. #Append
                     Ms. Marsh did not comment on the matter. Motion to ensure fresh livestock available for Pact not passed, postponed until future meetings. 
                     ~ change(insanity, 1)
                 
-                *** they would be changing suppliers[] for their meat supply.
+                *** they would be changing suppliers[] for their meat supply. #Append
                     Ms. Marsh did not comment further on the matter. 
                     ~ change(insanity, -2)
 
             ** [Next item]
         
-        +   [Minutetaker Olmstead] Minutetaker Olmstead gave an update on the new font provided by the Old Ones. Olmstead said he tried to install the font pack however the file format was unrecognised by his laptop. {insanity > 0: He said that it caused his computer to start pulsing as if it was breathing.}  
+        +   [Minutetaker Olmstead] Minutetaker Olmstead gave an update on the new font provided by the Old Ones. Olmstead said he tried to install the font pack however the file format was unrecognised by his laptop. {insanity > 0: He said that it caused his computer to start pulsing as if it was breathing.}#Append
             Mayor Van Zetten suggested Minutetaker Olmstead consult the Council's IT Department to raise an urgent ticket before next meeting. Ms. Marsh said it was important Minutetaker Olmstead was able to type in the Old Language for the New Pact to be successful.
             ~fontpack = true
             
@@ -203,7 +203,7 @@ VAR DEBUG = false
     -   -> agendatwo   
 
 === endagendatwo
-        *   Meeting adjourned.
+        *   Meeting adjourned.#Append
         -   #NextMeeting=meetingthree
             -> DONE
 
@@ -213,9 +213,9 @@ VAR DEBUG = false
 #SetSeal=2
     -   The following minutes were taken at the regular monthly meeting of the Mayor, the Town Board, {insanity > 0:and the Emissaries of Dagon} on 23 September 2018 at the Town Hall in Poimena, Tasmania. 
         {not mayortaken:Mayor Van Zetten}{mayortaken: Constable Williamson, standing in for Mayor Van Zetten, who was absent without reason given,}{mayortaken && constabletaken: Ms. Marsh, standing in for Mayor Van Zetten, who was absent without reason given,} called the meeting to order at 
-        *   7.01pm[] - Full Moon.
+        *   7.01pm[] - Full Moon.#Append
         
-        *   11111.1111111pm[] - Full Moon.
+        *   11111.1111111pm[] - Full Moon.#Append
         
     -   -> startpact    
     
