@@ -5,6 +5,8 @@ public class Main : MonoSingleton<Main> {
 	[Header("Skips the intro (editor only)")]
 	public bool skipIntro = false;
 	public bool fastIntro = false;
+	[Tooltip("Display text quickly in editor.")]
+	public bool fastText = false;
 
 	[HideInInspector]
 	public MainState currentState;

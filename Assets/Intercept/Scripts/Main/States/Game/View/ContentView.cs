@@ -24,6 +24,10 @@ public class ContentView : StoryElementView {
 			if((Main.Instance.gameState.hasMadeAChoice || Application.isEditor) && Input.GetMouseButtonDown(0)) {
 				textTyper.ShowInstantly();
 			}
+			else if(Main.Instance.fastText && Application.isEditor)
+			{
+				textTyper.ShowInstantly();
+			}
 		}
 	}
 
