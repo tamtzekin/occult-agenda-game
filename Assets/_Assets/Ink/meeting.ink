@@ -144,7 +144,7 @@ VAR DEBUG = false
 #SetSeal=1
     -   The following minutes were taken at the regular monthly meeting of the Mayor and the Town Board on 13 September 2018 at the Town Hall in Poimena, Tasmania. 
         Mayor Van Zetten called the meeting to order at 7:16pm - Waning Crescent. 
-        He apologised for his lateness{insanity < 0:.}{insanity > 0:, as an Old One that had taken up residence in the the fish pond his backyard needed to be fed.}
+        He apologised for his lateness{insanity < 0:.}{insanity > 0:, as an Old One that had taken up residence in the fish pond his backyard needed to be fed.}
         
         *   [Mayor's announcements] 
 
@@ -157,7 +157,7 @@ VAR DEBUG = false
 
     -   (agendatwo)
         The {first|second|third|final|-> endagendatwo} item on the agenda was addressed by
-        *   [The Mayor] Mayor Van Zetten. He reminded the room that they would need to recite the terms of the New Pact in a language the Old Ones could understand. The Mayor said he would be handing out photocopies of additional sigil sheets needed for the ritual at the conclusion the meeting. {insanity >0: When asked, the Mayor said the last copy of the dictionary went up in flames last time it was used.} #Append
+        *   [The Mayor] Mayor Van Zetten. He reminded the room that they would need to recite the terms of the New Pact in a language the Old Ones could understand. The Mayor said he would be handing out photocopies of additional sigil sheets needed for the ritual at the conclusion of the meeting. {insanity >0: When asked, the Mayor said the last copy of the dictionary went up in flames last time it was used.} #Append
             **  [Destroy dictionary] Ms. Marsh took the dictionary from Minutetaker Olmstead and asked that they move on from this agenda item. 
                 *** [Clarify further] 
                     The Mayor seemed unable to speak, as if his mouth was glued together. There was fear in his eyes. 
@@ -167,7 +167,7 @@ VAR DEBUG = false
                 
             **  [Next item]
         
-        *   [Barnabas Marsh] Mr. Marsh was awake during this meeting, much to the surprise of the room.#Append
+        *   Barnabas Marsh[]. Mr. Marsh was awake during this meeting, much to the surprise of the room.#Append
             Ms. Alicia Marsh acted as translator between the room and Mr. Marsh. (These Minutes record the translation as it was relayed by Ms. Marsh, however the original transcript in Old Language was not recorded).
             Barnabas stated he represented Pht'thya-l'y (sp?) as Visiting Consul, who sends their apologies for not attending the meeting for the last
             **  two meetings[]. He apologised again for his absence. #Append
@@ -178,7 +178,7 @@ VAR DEBUG = false
                 {insanity > 0: Mr. Marsh levitated as he spoke.}
                 ~ change(insanity, 1)
                 
-        *   [Alicia Marsh] {not mayortaken: When prompted by the Mayor, }Mr. Marsh responded on her behalf however acting through Ms. Marsh as translator. It seemed as if when Ms. Marsh was translating the Old Language for Mr. Marsh, she was unable to speak for herself. Ms. Marsh's partner, who was in the audience, stood up and replied that "this was something she always did, no big deal."#Append
+        *   Alicia Marsh[]. {not mayortaken: When prompted by the Mayor, }Mr. Marsh responded on her behalf however acting through Ms. Marsh as translator. It seemed as if when Ms. Marsh was translating the Old Language for Mr. Marsh, she was unable to speak for herself. Ms. Marsh's partner, who was in the audience, stood up and replied that "this was something she always did, no big deal."#Append
             ** [Clarify] Minutetaker Olmstead asked Ms. Marsh to clarify. 
                 {not mayortaken: The Mayor asked Ms. Marsh about the}{mayortaken:Ms. Marsh clarified the} complaint that was made on 1 September, 1887 (NB. check date against records?). The issue pertained to the unavailability of the quality of {insanity > 0: raw cow }meat available in previous Pacts made. At the time, Ms. Marsh noted that 
                 ***  the Pact required fresh meat[] for its success. #Append
