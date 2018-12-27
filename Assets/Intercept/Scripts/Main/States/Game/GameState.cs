@@ -51,6 +51,9 @@ public class GameState : MainState {
 		//contentManager.enabled = false;
 		settingsView.Hide();
 		//settingsButton.Hide();
+		#if UNITY_STANDALONE
+		GameObject.Find("Sanity").SetActive(false);
+		#endif
 	}
 
 	public override void Enter () {
@@ -76,7 +79,10 @@ public class GameState : MainState {
 		{
 			Debug.Log("insanity changed to " + newValue);
 			int newSanity = (int) newValue;
-			if(newSanity > previousSanityValue)
+			#if UNITY_EDITOR
+			GameObject.Find("Sanity").GetComponent<Text>().text = newSanity.ToString();
+			#endif
+			if (newSanity > previousSanityValue)
 			{// sanity increased
 				Debug.Log("Play sanity increase audio");
 				AudioClipDatabase.Instance.PlaySanityIncrease();
