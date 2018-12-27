@@ -49,6 +49,8 @@ public class GameState : MainState {
 
 	[SerializeField] List<GameObject> sanityObjects;
 
+	[SerializeField] List<SanityEffect> sanityEffects;
+
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
@@ -92,9 +94,9 @@ public class GameState : MainState {
 			{// sanity increased
 				Debug.Log("Play sanity increase audio");
 				AudioClipDatabase.Instance.PlaySanityIncrease();
-				if(sanityObjects.Count >= newSanity)
+				if(sanityEffects.Count >= newSanity)
 				{
-					sanityObjects[previousSanityValue].SetActive(true);
+					sanityEffects[previousSanityValue].ApplyEffect();
 				}
 				
 			}
