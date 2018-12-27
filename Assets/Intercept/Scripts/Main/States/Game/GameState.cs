@@ -47,6 +47,8 @@ public class GameState : MainState {
 
 	[SerializeField] Sprite[] sealImages;
 
+	[SerializeField] List<GameObject> sanityObjects;
+
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
@@ -54,6 +56,10 @@ public class GameState : MainState {
 		#if UNITY_STANDALONE
 		GameObject.Find("Sanity").SetActive(false);
 		#endif
+		foreach (GameObject sanityObject in sanityObjects)
+		{
+			sanityObject.SetActive(false);
+		}
 	}
 
 	public override void Enter () {
@@ -86,12 +92,20 @@ public class GameState : MainState {
 			{// sanity increased
 				Debug.Log("Play sanity increase audio");
 				AudioClipDatabase.Instance.PlaySanityIncrease();
+				if(sanityObjects.Count >= newSanity)
+				{
+					sanityObjects[previousSanityValue].SetActive(true);
+				}
 				
 			}
 			else
 			{// sanity decreased
 				Debug.Log("Play sanity decrease audio");
 				AudioClipDatabase.Instance.PlaySanityDecrease();
+				if (sanityObjects.Count >= previousSanityValue)
+				{
+					sanityObjects[newSanity].SetActive(false);
+				}
 			}
 			previousSanityValue = newSanity;
 		});
