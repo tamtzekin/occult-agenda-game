@@ -195,6 +195,10 @@ public class GameState : MainState {
 			ChevronButtonView chevronView = null;
 			while(story.canContinue) {
 				string content = story.Continue().Trim();
+				if(content.StartsWith("FONT_OLD"))
+				{
+					content = content.Substring(9);
+				}
 				bool append = false;
 				foreach (String tag in story.currentTags)
 				{

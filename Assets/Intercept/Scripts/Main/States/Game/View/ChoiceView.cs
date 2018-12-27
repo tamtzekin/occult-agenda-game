@@ -9,6 +9,8 @@ public class ChoiceView : StoryElementView {
 	public ChoiceGroupView choiceGroupView;
 	public Choice choice;
 
+	[SerializeField] Font oldOneFont;
+
 	public Button button {
 		get {
 			return GetComponent<Button>();
@@ -42,7 +44,15 @@ public class ChoiceView : StoryElementView {
 
 	public void LayoutText (Choice choice) {
 		this.choice = choice;
-		base.LayoutText(choice.text);
+		if(choice.text.StartsWith("FONT_OLD"))
+		{
+			GetComponent<Text>().font = oldOneFont;
+			base.LayoutText(choice.text.Substring(9));
+		}
+		else
+		{
+			base.LayoutText(choice.text);
+		}
 	}
 
 	public void Render () {

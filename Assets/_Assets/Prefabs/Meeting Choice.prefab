@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content: 
   choiceGroupView: {fileID: 0}
+  oldOneFont: {fileID: 12800000, guid: 540fc4ada64f28943a996a68e2b3d25c, type: 3}
 --- !u!114 &11456086
 MonoBehaviour:
   m_ObjectHideFlags: 1

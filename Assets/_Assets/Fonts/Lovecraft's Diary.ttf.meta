@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 540fc4ada64f28943a996a68e2b3d25c
+timeCreated: 1545888528
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lovecraft's Diary
+  fontNames:
+  - Lovecraft's Diary
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

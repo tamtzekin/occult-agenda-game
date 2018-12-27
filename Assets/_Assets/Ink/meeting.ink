@@ -234,7 +234,7 @@ VAR DEBUG = false
             The phrase was redacted by Minutetaker Olmstead of their own accord and not written down.
             ~ change(insanity, 1)
 
-        *   Ph'nglui mglw'nafh Pht'thya-l'y Blue Tier Plateau wgah'nagl fhtagn[].
+        *   FONT_OLD Ph'nglui mglw'nafh Pht'thya-l'y Blue Tier Plateau wgah'nagl fhtagn[].
             ~ change(insanity, 1)
             // "In his house at Blue Tier Plateau dead Pht'thya-l'y lies dreaming"
 
@@ -251,7 +251,7 @@ VAR DEBUG = false
         *   {dictionary && fontpack && photocopies} [Pht'thya-l'y sleeps and waits, we rescind our prayers and silence it eternally.]PHT'THYA-L'Y SLEEPS AND WAITS, WE RESCIND OUR PRAYERS AND SILENCE IT ETERNALLY.            
             ~ change(insanity, -1)
 
-        *   Mglw'nafh fhthagn-ngah cf'ayak 'vulgtmm vugtlag'n[].
+        *   FONT_OLD Mglw'nafh fhthagn-ngah cf'ayak 'vulgtmm vugtlag'n[].
             ~ change(insanity, 1)
             // "[It] sleeps/waits and then acts, we send [our] prayers [to thee], answer [us]"
 
@@ -268,7 +268,7 @@ VAR DEBUG = false
             inutetaker seized control of the laptop once more and
             ~ change(insanity, 1)
 
-        *   Ph'nglui mglw'nafh Pht'thya-l'y Poimena n'gha-ghaa naf'lthagn[].
+        *   FONT_OLD Ph'nglui mglw'nafh Pht'thya-l'y Poimena n'gha-ghaa naf'lthagn[].
             ~ change(insanity, 1)
             // DEATH "Gone but not forgotten, Pht'thya-l'y sleeps/waits at Poimena, [promising] death to one and all."
 
