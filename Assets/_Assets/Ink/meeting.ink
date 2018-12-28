@@ -158,7 +158,8 @@ VAR DEBUG = false
     -   (agendatwo)
         The {first|second|third|final} item on the agenda was addressed by
         *   [The Mayor] Mayor Van Zetten. He reminded the room that they would need to recite the terms of the New Pact in a language the Old Ones could understand. The Mayor said he would be handing out photocopies of additional sigil sheets needed for the ritual at the conclusion of the meeting. {insanity >0: When asked, the Mayor said the last copy of the dictionary went up in flames last time it was used.} #Append
-            **  [Destroy dictionary] Ms. Marsh took the dictionary from Minutetaker Olmstead and asked that they move on from this agenda item. 
+            **  [Destroy dictionary] Ms. Marsh took the dictionary from Minutetaker Olmstead and asked that they move on from this agenda item.
+                ~ dictionary = false
                 *** [Clarify further] 
                     The Mayor seemed unable to speak, as if his mouth was glued together. There was fear in his eyes. 
                     Ms. Marsh clarified that the Old Ones were not happy with the Mayor. 
