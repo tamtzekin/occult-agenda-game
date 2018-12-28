@@ -144,7 +144,7 @@ VAR DEBUG = false
 #SetSeal=1
     -   The following minutes were taken at the regular monthly meeting of the Mayor and the Town Board on 13 September 2018 at the Town Hall in Poimena, Tasmania. 
         Mayor Van Zetten called the meeting to order at 7:16pm - Waning Crescent. 
-        He apologised for his lateness{insanity < 0:.}{insanity > 0:, as an Old One that had taken up residence in the fish pond his backyard needed to be fed.}
+        He apologised for his lateness{insanity < 0:.}{insanity > 0:, as an Old One that had taken up residence in the fish pond in his backyard needed to be fed.}
         
         *   [Mayor's announcements] 
 
@@ -156,7 +156,7 @@ VAR DEBUG = false
             Ms. Alicia Marsh{not constabletaken:, Constable James Williamson,} and Mr. Barnabas Marsh were present. {constabletaken: Constable James Williamson sent his apologies; he was unable to make the meeting on account of the moon in its Waning Crescent phase.}
 
     -   (agendatwo)
-        The {first|second|third|final|-> endagendatwo} item on the agenda was addressed by
+        The {first|second|third|final} item on the agenda was addressed by
         *   [The Mayor] Mayor Van Zetten. He reminded the room that they would need to recite the terms of the New Pact in a language the Old Ones could understand. The Mayor said he would be handing out photocopies of additional sigil sheets needed for the ritual at the conclusion of the meeting. {insanity >0: When asked, the Mayor said the last copy of the dictionary went up in flames last time it was used.} #Append
             **  [Destroy dictionary] Ms. Marsh took the dictionary from Minutetaker Olmstead and asked that they move on from this agenda item. 
                 *** [Clarify further] 
@@ -200,10 +200,10 @@ VAR DEBUG = false
             ~ photocopies = true 
         ->  endagendatwo
 
-    -   -> agendatwo   
+    -   {agendatwo < 4:->  agendatwo}{agendatwo == 4:->  endagendatwo}
 
-=== endagendatwo
-        *   Meeting adjourned.#Append
+- (endagendatwo)
+        *   Meeting adjourned.
         -   #NextMeeting=meetingthree
             -> DONE
 
