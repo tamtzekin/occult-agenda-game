@@ -265,7 +265,7 @@ VAR DEBUG = false
             al4llllwtl44tttttttttttttttttttttttttttttttttt
             W4TLLT4LTL4W
             OOK0PK090O9KP9
-            inutetaker seized control of the laptop once more and
+            inutetaker seized control of the laptop once more and #EndBack=blood
             ~ change(insanity, 1)
 
         *   FONT_OLD Ph'nglui mglw'nafh Pht'thya-l'y Poimena n'gha-ghaa naf'lthagn[].

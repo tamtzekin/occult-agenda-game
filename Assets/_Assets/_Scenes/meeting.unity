@@ -7499,6 +7499,8 @@ MonoBehaviour:
   - {fileID: 1171065774}
   - {fileID: 252582768}
   - {fileID: 186615092}
+  endBackground: {fileID: 2061242867}
+  endBlood: {fileID: 21300000, guid: 617a49995ba95ad4c87e7f0360909920, type: 3}
 --- !u!1 &2051692465
 GameObject:
   m_ObjectHideFlags: 0

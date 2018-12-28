@@ -51,6 +51,10 @@ public class GameState : MainState {
 
 	[SerializeField] List<SanityEffect> sanityEffects;
 
+	[SerializeField] Image endBackground;
+
+	[SerializeField] Sprite endBlood;
+
 	private void Awake () {
 		//contentManager.enabled = false;
 		settingsView.Hide();
@@ -221,6 +225,13 @@ public class GameState : MainState {
 						{
 							int index = int.Parse(tagValue[1]);
 							contentManager.sealImage.sprite = sealImages[index];
+						}
+						if (tagValue[0] == "EndBack")
+						{
+							if(tagValue[1] == "blood")
+							{
+								endBackground.sprite = endBlood;
+							}
 						}
 					}
 					else
