@@ -55,7 +55,7 @@ public class GameState : MainState {
 		//contentManager.enabled = false;
 		settingsView.Hide();
 		//settingsButton.Hide();
-		#if UNITY_STANDALONE
+		#if !UNITY_EDITOR
 		GameObject.Find("Sanity").SetActive(false);
 		#endif
 		foreach (GameObject sanityObject in sanityObjects)
