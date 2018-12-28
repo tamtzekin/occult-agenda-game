@@ -124,7 +124,7 @@ VAR DEBUG = false
         *   [Barnabas Marsh]
             the Mayor again. He asked Mr. Marsh if he had any motions to raise. Mr. Marsh did not comment - this was expected behaviour of Mr. Marsh at Town Hall meetings.#Append
                 
-        *   [No one]
+        *   [No one] no one.#Append
             No further agenda items were raised.
         ->  endagendaone
                 
@@ -191,11 +191,11 @@ VAR DEBUG = false
 
             ** [Next item]
         
-        +   [Minutetaker Olmstead] Minutetaker Olmstead gave an update on the new font provided by the Old Ones. Olmstead said he tried to install the font pack however the file format was unrecognised by his laptop. {insanity > 0: He said that it caused his computer to start pulsing as if it was breathing.}#Append
+        *   Minutetaker Olmstead[], who gave an update on the new font provided by the Old Ones. Olmstead said he tried to install the font pack however the file format was unrecognised by his laptop. {insanity > 0: He said that it caused his computer to start pulsing as if it was breathing.}#Append
             Mayor Van Zetten suggested Minutetaker Olmstead consult the Council's IT Department to raise an urgent ticket before next meeting. Ms. Marsh said it was important Minutetaker Olmstead was able to type in the Old Language for the New Pact to be successful.
             ~fontpack = true
             
-        *   [No one]
+        *   [No one]no one.#Append
             Mayor Van Zetten handed out photocopies of the runes to those in attendance. No further agenda items were raised. 
             ~ photocopies = true 
         ->  endagendatwo
@@ -276,20 +276,20 @@ VAR DEBUG = false
     
 === endinghandler
 {   
+    -   insanity <= 0 && not constabletaken && not mayortaken:
+        #Ending=bestending
+        -> DONE
+        
+    -   insanity <= 0 && not constabletaken || not mayortaken:
+        #Ending=goodending
+        -> DONE
+
     -   insanity > 0 && constabletaken && mayortaken:
         #Ending=worstending
         -> DONE
         
     -   insanity > 0 && constabletaken || mayortaken:
         #Ending=worstending
-        -> DONE
-        
-    -   insanity < 0 && not constabletaken || not mayortaken:
-        #Ending=goodending
-        -> DONE
-        
-    -   insanity < 0 && not constabletaken && not mayortaken:
-        #Ending=bestending
         -> DONE
     
     -   else:
