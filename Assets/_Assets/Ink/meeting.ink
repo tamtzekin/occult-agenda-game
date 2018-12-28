@@ -76,7 +76,7 @@ VAR DEBUG = false
             **  [Next item]
     
     -   (agendaone)
-        The {first|second|third|final|-> endagendaone} item on the agenda was addressed by
+        The {first|second|third|final} item on the agenda was addressed by
         *   [The Mayor] Mayor Van Zetten, who noted the ongoing works in the town's sewerage system. An attendee asked about the liquid that had been appearing in their home's faucets, which was said to cause sweats and mild hallucinations for anyone who drank the water.#Append
             **  [Clarify] The Mayor explained that the "visitor" that had existed beneath the town for thousands (fact check?) of years had affected the quality of the town's water supply to be beneath an acceptable standard, and thanked the gentleman for his patience and understanding.
                 ~ change(insanity, 1)
@@ -125,13 +125,13 @@ VAR DEBUG = false
             the Mayor again. He asked Mr. Marsh if he had any motions to raise. Mr. Marsh did not comment - this was expected behaviour of Mr. Marsh at Town Hall meetings.#Append
                 
         *   [No one] no one.#Append
-            No further agenda items were raised.
         ->  endagendaone
                 
-    -   ->  agendaone
+    -   {agendaone < 4:->  agendaone}{agendaone == 4:->  endagendaone}
 
-=== endagendaone
-    -   At the Meeting Close Mayor, Van Zetten provided Minutetaker Olmstead with an 'English-to-Old Language' dictionary to assist in recording the upcoming Pact Renewal negotiations.
+- (endagendaone)
+    {agendaone > 1:No further agenda items were raised.}
+    At meeting close, Mayor Van Zetten provided Minutetaker Olmstead with an 'English-to-Old Language' dictionary to assist in recording the upcoming Pact Renewal negotiations.
         ~ dictionary = true 
         The meeting was adjourned at 7:31pm. 
         
