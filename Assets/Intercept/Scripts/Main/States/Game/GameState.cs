@@ -251,6 +251,13 @@ public class GameState : MainState {
 						}
 						else
 						{
+							while (contentView.textTyper.typing)
+							{
+								Debug.Log("wait to make end chevron");
+								yield return null;
+							}
+							CreateEmptyView(100f);
+							yield return new WaitForSeconds(1.5f);
 							chevronView = CreateChevronView();
 						}
 
@@ -357,7 +364,7 @@ public class GameState : MainState {
 	ChevronButtonView CreateChevronView () {
 		ChevronButtonView chevronView = Instantiate(chevronViewPrefab);
 		chevronView.transform.SetParent(choiceContainerView.transform, false);
-		CreateEmptyView(chevronView.rectTransform.sizeDelta.y);
+		//CreateEmptyView(chevronView.rectTransform.sizeDelta.y);
 		return chevronView;
 	}
 
