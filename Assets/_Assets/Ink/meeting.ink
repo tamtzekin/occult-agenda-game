@@ -48,6 +48,13 @@ VAR DEBUG = false
 === function change(ref stat, value)
     ~stat = stat + value
 
+EXTERNAL getTime()
+
+=== function getTime() ===
+// Usually external functions can only return placeholder
+// results, otherwise they'd be defined in ink!
+~ return "7:31pm"
+
 /*                                      */ 
 // GAME STARTS HERE
 
@@ -65,19 +72,19 @@ VAR DEBUG = false
             His son, James Olmstead took his place as minutetaker for the Town of Poimena. 
     
             Mayor Van Zetten opened the meeting by reminding residents that the annual renewal of the Town Pact would be lapsing next month. 
-            The following meeting, taking place on 17 September, the Waning Crescent of the moon cycle, will be the date the conditions of the New Pact are decided upon. 
+            The following meeting, taking place on 17 September, the Waning Crescent of the moon cycle, will be the date the conditions of the New Pact are decided upon. #AddMinutes=7
     
     -   (rollcallone)
         *   [Take attendance]ROLL CALL:
             Constable Jim Williamson, Constable with the Poimena Police Department, Ms. Alicia Marsh, and Mr. Barnabas Marsh (no relation), longtime resident of the Blue Tier Plateau, were present. 
-            Mr. Marsh was unable to address his attendance verbally. Attendance noted.
+            Mr. Marsh was unable to address his attendance verbally. Attendance noted. #AddMinutes=5
             **  [Clarify] Ms. Marsh reminded Minutetaker Olmstead that Mr. Marsh was not accustomed to speaking in English, and that he preferred just listening. 
                 ~ change(insanity, 1)
             **  [Next item]
     
     -   (agendaone)
         The {first|second|third|final} item on the agenda was addressed by
-        *   [The Mayor] Mayor Van Zetten, who noted the ongoing works in the town's sewerage system. An attendee asked about the liquid that had been appearing in their home's faucets, which was said to cause sweats and mild hallucinations for anyone who drank the water.#Append
+        *   [The Mayor] Mayor Van Zetten, who noted the ongoing works in the town's sewerage system. An attendee asked about the liquid that had been appearing in their home's faucets, which was said to cause sweats and mild hallucinations for anyone who drank the water.#Append #AddMinutes=3
             **  [Clarify] The Mayor explained that the "visitor" that had existed beneath the town for thousands (fact check?) of years had affected the quality of the town's water supply to be beneath an acceptable standard, and thanked the gentleman for his patience and understanding.
                 ~ change(insanity, 1)
                 *** [Clarify further] Ms. Marsh interrupted and reminded the meeting that there were other matters on the agenda.
@@ -86,7 +93,7 @@ VAR DEBUG = false
 
             **  [Leave it] The Mayor thanked the gentleman for his patience and understanding.
     
-        *   Jim Williamson[]. Constable Williamson reported that he received complaints from homeowners that they had seen "unsettling" rubbish appearing in their backyard, as well as #Append
+        *   Jim Williamson[]. Constable Williamson reported that he received complaints from homeowners that they had seen "unsettling" rubbish appearing in their backyard, as well as #Append #AddMinutes=4
             **  [beer bottles]"beer bottles" scattered around their property. No further delinquent activity was reported.#Append
                 ~ change(insanity, -1)
                 
@@ -108,7 +115,7 @@ VAR DEBUG = false
                         ~ constabletaken = true
                     ****    [Next item]
                        
-        *   Alicia Marsh[]. Ms. Marsh addressed the Mayor directly on the minute-keeping. She reminded those in attendance that notes were strictly only to be taken by the assigned Minutekeeper.#Append
+        *   Alicia Marsh[]. Ms. Marsh addressed the Mayor directly on the minute-keeping. She reminded those in attendance that notes were strictly only to be taken by the assigned Minutekeeper.#Append #AddMinutes=6
             **  [Written notes?] No written notes of any kind were to be taken. Ms. Marsh reminded them this would interrupt the written sigils needed for the New Pact to be conducted.
                 ~ change(insanity, 1)
                 *** [Clarify] Constable Williamson suggested this matter be raised next meeting. All in favour. 
@@ -122,7 +129,7 @@ VAR DEBUG = false
                 *** [Next item]
 
         *   [Barnabas Marsh]
-            the Mayor again. He asked Mr. Marsh if he had any motions to raise. Mr. Marsh did not comment - this was expected behaviour of Mr. Marsh at Town Hall meetings.#Append
+            the Mayor again. He asked Mr. Marsh if he had any motions to raise. Mr. Marsh did not comment - this was expected behaviour of Mr. Marsh at Town Hall meetings.#Append #AddMinutes=5
                 
         *   [No one] no one.#Append
         ->  endagendaone
@@ -131,9 +138,9 @@ VAR DEBUG = false
 
 - (endagendaone)
     {agendaone > 1:No further agenda items were raised.}
-    At meeting close, Mayor Van Zetten provided Minutetaker Olmstead with an 'English-to-Old Language' dictionary to assist in recording the upcoming Pact Renewal negotiations.
+    At meeting close, Mayor Van Zetten provided Minutetaker Olmstead with an 'English-to-Old Language' dictionary to assist in recording the upcoming Pact Renewal negotiations. #AddMinutes=3
         ~ dictionary = true 
-        The meeting was adjourned at 7:31pm. 
+        The meeting was adjourned at {getTime()}.
         
         *   Meeting adjourned.
     -   #NextMeeting=meetingtwo

@@ -43,6 +43,9 @@ public class GameState : MainState {
 
 	[SerializeField] Text timeText;
 
+	int hourTime = 0;
+	int minuteTime = 0;
+
 	[SerializeField] Text dateText;
 
 	[SerializeField] Sprite[] sealImages;
@@ -85,6 +88,19 @@ public class GameState : MainState {
 			enabled = false;
 		}
 		story = new Story(storyJSON.text);
+		story.BindExternalFunction("getTime", () =>
+		{
+			string currentTime;
+			if (minuteTime < 10)
+			{
+				currentTime = hourTime + ":0" + minuteTime + "pm";
+			}
+			else
+			{
+				currentTime = hourTime + ":" + minuteTime + "pm";
+			}
+			return currentTime;
+		});
 		StartCoroutine(OnAdvanceStory());
 
 		story.ObserveVariable("insanity", (string varName, object newValue) =>
@@ -216,6 +232,37 @@ public class GameState : MainState {
 						if (tagValue[0] == "SetTime")
 						{
 							timeText.text = tagValue[1];
+							string[] timeSplit = tagValue[1].Split(':');
+							bool isNumeric = int.TryParse(timeSplit[0], out hourTime);
+							if (isNumeric)
+							{
+								int.TryParse(timeSplit[1].Substring(0, 2), out minuteTime);
+							}
+						}
+						if (tagValue[0] == "AddMinutes")
+						{
+							int newMinutes = 0;
+							if (int.TryParse(tagValue[1], out newMinutes))
+							{
+								minuteTime = minuteTime + newMinutes;
+								if (minuteTime > 60)
+								{
+									hourTime = hourTime + 1;
+									minuteTime = minuteTime - 60;
+								}
+								if (minuteTime < 10)
+								{
+									timeText.text = hourTime + ":0" + minuteTime + "pm";
+								}
+								else
+								{
+									timeText.text = hourTime + ":" + minuteTime + "pm";
+								}
+							}
+							else
+							{
+								Debug.LogWarning("AddMinutes not given a number! " + tagValue[1]);
+							}
 						}
 						if (tagValue[0] == "SetDate")
 						{
