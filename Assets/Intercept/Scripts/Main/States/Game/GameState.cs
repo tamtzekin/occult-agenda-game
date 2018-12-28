@@ -98,7 +98,7 @@ public class GameState : MainState {
 			{// sanity increased
 				Debug.Log("Play sanity increase audio");
 				AudioClipDatabase.Instance.PlaySanityIncrease();
-				if(sanityEffects.Count >= newSanity)
+				if(sanityEffects.Count >= newSanity && previousSanityValue >= 0)
 				{
 					sanityEffects[previousSanityValue].ApplyEffect();
 				}
