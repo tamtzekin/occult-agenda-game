@@ -7,9 +7,16 @@ public class SanityEvent : SanityEffect
 {
 	public UnityEvent addEvent;
 
+	public UnityEvent removeEvent;
+
 	public override void ApplyEffect()
 	{
 		Debug.Log("Sanity Effect " + name);
 		addEvent.Invoke();
+	}
+
+	public override void RemoveEffect()
+	{
+		removeEvent.Invoke();
 	}
 }

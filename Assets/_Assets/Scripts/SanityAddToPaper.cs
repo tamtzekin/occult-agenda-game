@@ -24,7 +24,11 @@ public class SanityAddToPaper : SanityEffect
 		//Debug.Log(addedObject.transform.position);
 		//addedObject.transform.position = objectPosition;
 		//Debug.Log(addedObject.transform.position);
+	}
 
+	public override void RemoveEffect()
+	{
+		addedObject.SetActive(false);
 	}
 }
  

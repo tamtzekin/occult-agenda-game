@@ -104,9 +104,9 @@ public class GameState : MainState {
 			{// sanity decreased
 				Debug.Log("Play sanity decrease audio");
 				AudioClipDatabase.Instance.PlaySanityDecrease();
-				if (sanityObjects.Count >= previousSanityValue)
+				if (sanityEffects.Count >= previousSanityValue && newSanity >= 0)
 				{
-					sanityObjects[newSanity].SetActive(false);
+					sanityEffects[newSanity].RemoveEffect();
 				}
 			}
 			previousSanityValue = newSanity;
