@@ -11,7 +11,7 @@ public class BloomBlowOut : MonoBehaviour
 
 	Bloom bloom;
 
-	float blowOut = 5f;
+	float blowOut;
 	float normal;
 
 	// Use this for initialization
@@ -24,8 +24,9 @@ public class BloomBlowOut : MonoBehaviour
 		bloomTween.OnChange += ChangeBloomTween;
 	}
 
-	public void TriggerBloomOut()
+	public void TriggerBloomOut(float blowOutAmount)
 	{
+		blowOut = blowOutAmount;
 		StartCoroutine(BloomOut(1.5f));
 	}
 
