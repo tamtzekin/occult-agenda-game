@@ -8250,7 +8250,7 @@ GameObject:
   - component: {fileID: 2064339151}
   - component: {fileID: 2064339152}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: PostProcessVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8314,6 +8314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowMaterial: {fileID: 2100000, guid: d791894ecc9fad34bb020421e4704919, type: 2}
+  postProcessVolume: {fileID: 2064339152}
 --- !u!114 &2085871097
 MonoBehaviour:
   m_ObjectHideFlags: 0
