@@ -160,6 +160,7 @@ public class GameState : MainState {
 			yield return null;
 		}
 		fadeCanvasGroup.alpha = 1;
+		yield return new WaitForSeconds(1.0f);
 
 		currentPage.gameObject.SetActive(false);
 		story.ChoosePathString(meetingName);
