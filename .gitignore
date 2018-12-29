@@ -11,9 +11,11 @@ obj/Debug
 Assets/Intercept/Fonts*
 Assets/Intercept/Textures*
 Assets/Intercept/SFX*
-Assets/PostProcessing/Textures/Blue Noise 256px*
-Assets/PostProcessing/Textures/Cubes*
-Assets/PostProcessing/Textures/Lens Dirt*
-Assets/PostProcessing/Textures/LUTs*
-Assets/PostProcessing/Textures/SMAA*
-Assets/PostProcessing/Textures/Spectral LUTs*
+Assets/PostProcessing-2.1.2/PostProcessing/Textures/Blue Noise 256px*
+Assets/PostProcessing-2.1.2/PostProcessing/Textures/Cubes*
+Assets/PostProcessing-2.1.2/PostProcessing/Textures/Lens Dirt*
+Assets/PostProcessing-2.1.2/PostProcessing/Textures/LUTs*
+Assets/PostProcessing-2.1.2/PostProcessing/Textures/SMAA*
+Assets/PostProcessing-2.1.2/PostProcessing/Textures/Spectral LUTs*
+Assets/PostProcessing-2.1.2/Tests*
+Assets/PostProcessing-2.1.2/Documentation*
