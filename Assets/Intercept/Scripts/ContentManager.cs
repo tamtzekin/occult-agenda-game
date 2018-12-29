@@ -114,7 +114,8 @@ public class ContentManager : UIMonoBehaviour, IBeginDragHandler {
 		paperImage.rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, Mathf.Max(rectTransform.sizeDelta.y, paperImage.sprite.texture.height));
 		paperImage.rectTransform.anchoredPosition = new Vector2(paperImage.rectTransform.anchoredPosition.x, paperImage.rectTransform.sizeDelta.y * 0.5f);
 		// A hack to prevent the paper appearing on the first frame when we enter game mode
-		paperImage.enabled = paperImage.rectTransform.sizeDelta.y != paperImage.sprite.texture.height;
+		//paperImage.enabled = paperImage.rectTransform.sizeDelta.y != paperImage.sprite.texture.height;
+		// above hack doesn't work well with creating a new page for each meeting so not using it anymore
 	}
 
 	void ClampScrollRect () {
