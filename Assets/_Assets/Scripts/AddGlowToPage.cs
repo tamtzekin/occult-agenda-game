@@ -8,7 +8,7 @@ public class AddGlowToPage : MonoBehaviour
 
 	public void AddGlow()
 	{
-		Main.Instance.gameState.contentManager.paperImage.material = glowMaterial;
+		Main.Instance.gameState.contentManager.paperImage.material = new Material(glowMaterial);
 	}
 
 	public void RemoveGlow()
