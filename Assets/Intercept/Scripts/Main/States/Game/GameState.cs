@@ -164,6 +164,8 @@ public class GameState : MainState {
 
 		currentPage.gameObject.SetActive(false);
 		story.ChoosePathString(meetingName);
+
+		Material oldPageMaterial = contentManager.paperImage.material;
 		if (!ending)
 		{
 			currentPage = GameObject.Instantiate<Transform>(pagePrefab, GameObject.Find("Game Canvas").transform, false);
@@ -179,6 +181,11 @@ public class GameState : MainState {
 		contentManager = currentPage.GetComponentInChildren<ContentManager>();
 		contentParent = contentManager.layoutGroup.transform;
 		StartCoroutine(OnAdvanceStory());
+
+		if(oldPageMaterial && !ending)
+		{
+			contentManager.paperImage.material = oldPageMaterial;
+		}
 
 		if (meetingName.Equals("meetingthree"))
 		{
