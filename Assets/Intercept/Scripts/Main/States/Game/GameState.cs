@@ -45,6 +45,7 @@ public class GameState : MainState {
 
 	int hourTime = 0;
 	int minuteTime = 0;
+	bool outsideOfTime = false;
 
 	[SerializeField] Text dateText;
 
@@ -91,6 +92,10 @@ public class GameState : MainState {
 		story.BindExternalFunction("getTime", () =>
 		{
 			string currentTime;
+			if(outsideOfTime)
+			{
+				return timeText.text;
+			}
 			if (minuteTime < 10)
 			{
 				currentTime = hourTime + ":0" + minuteTime + "pm";
@@ -233,10 +238,20 @@ public class GameState : MainState {
 						{
 							timeText.text = tagValue[1];
 							string[] timeSplit = tagValue[1].Split(':');
-							bool isNumeric = int.TryParse(timeSplit[0], out hourTime);
-							if (isNumeric)
+							if (int.TryParse(timeSplit[0], out hourTime))
 							{
-								int.TryParse(timeSplit[1].Substring(0, 2), out minuteTime);
+								if(int.TryParse(timeSplit[1].Substring(0, 2), out minuteTime))
+								{
+									outsideOfTime = false;
+								}
+								else
+								{// couldn't parse minutes
+									outsideOfTime = true;
+								}
+							}
+							else
+							{
+								outsideOfTime = true;
 							}
 						}
 						if (tagValue[0] == "AddMinutes")
