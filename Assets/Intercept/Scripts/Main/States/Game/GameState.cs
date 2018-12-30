@@ -239,6 +239,7 @@ public class GameState : MainState {
 					content = content.Substring(9);
 				}
 				bool append = false;
+				bool delete = false;
 				foreach (String tag in story.currentTags)
 				{
 					if (tag.Contains("="))
@@ -316,18 +317,26 @@ public class GameState : MainState {
 						{
 							append = true;
 						}
+						else if (tag == "Delete")
+						{
+							delete = true;
+						}
 					}
 				}
 				if (content.Length > 0)
 				{
 					ContentView contentView;
-					if(!append)
+					if(append)
 					{
-						contentView = CreateContentView(content);
+						contentView = AppendToLastContentView(content);
+					}
+					else if(delete)
+					{
+						contentView = DeleteLastContentView(content);
 					}
 					else
 					{
-						contentView = AppendToLastContentView(content);
+						contentView = CreateContentView(content);
 					}
 					
 					if (!story.canContinue)
@@ -351,6 +360,11 @@ public class GameState : MainState {
 					}
 					while (contentView.textTyper.typing)
 						yield return null;
+
+					if (delete)
+					{
+						Destroy(contentView.gameObject);
+					}
 					if (story.canContinue)
 						yield return new WaitForSeconds(Mathf.Min(1.0f, contentView.textTyper.targetText.Length * 0.01f));
 				}
@@ -430,6 +444,14 @@ public class GameState : MainState {
 		Transform lastChildTransform = contentParent.transform.GetChild(contentParent.transform.childCount - 2);
 		ContentView contentView = lastChildTransform.GetComponent<ContentView>();
 		contentView.AppendText(content);
+		return contentView;
+	}
+
+	ContentView DeleteLastContentView(string content)
+	{
+		Transform lastChildTransform = contentParent.transform.GetChild(contentParent.transform.childCount - 2);
+		ContentView contentView = lastChildTransform.GetComponent<ContentView>();
+		contentView.DeleteText(content);
 		return contentView;
 	}
 

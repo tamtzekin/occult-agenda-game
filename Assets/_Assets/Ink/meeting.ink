@@ -131,7 +131,7 @@ EXTERNAL getTime()
         *   [Barnabas Marsh]
             the Mayor again. He asked Mr. Marsh if he had any motions to raise. Mr. Marsh did not comment - this was expected behaviour of Mr. Marsh at Town Hall meetings.#Append #AddMinutes=5
                 
-        *   [No one] no one.#Append
+        *   [No one]#Delete
         ->  endagendaone
                 
     -   {agendaone < 4:->  agendaone}{agendaone == 4:->  endagendaone}
@@ -151,7 +151,7 @@ EXTERNAL getTime()
 #SetSeal=1
     -   The following minutes were taken at the regular monthly meeting of the Mayor and the Town Board on 13 September 2018 at the Town Hall in Poimena, Tasmania. 
         Mayor Van Zetten called the meeting to order at 7:16pm - Waning Crescent. 
-        He apologised for his lateness{insanity < 0:.}{insanity > 0:, as an Old One that had taken up residence in the fish pond in his backyard needed to be fed.}
+        He apologised for his lateness{insanity < 0:.}{insanity > 0:, as an Old One that had taken up residence in the fish pond in his backyard needed to be fed}.
         
         *   [Mayor's announcements] 
 
@@ -203,7 +203,7 @@ EXTERNAL getTime()
             Mayor Van Zetten suggested Minutetaker Olmstead consult the Council's IT Department to raise an urgent ticket before next meeting. Ms. Marsh said it was important Minutetaker Olmstead was able to type in the Old Language for the New Pact to be successful.
             ~fontpack = true
             
-        *   [No one]no one.#Append
+        *   [No one]#Delete
             Mayor Van Zetten handed out photocopies of the runes to those in attendance. No further agenda items were raised. 
             ~ photocopies = true 
         ->  endagendatwo

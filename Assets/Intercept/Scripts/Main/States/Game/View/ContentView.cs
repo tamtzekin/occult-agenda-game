@@ -97,6 +97,36 @@ public class ContentView : StoryElementView {
 			AudioClipDatabase.Instance.PlayKeySound();
 	}
 
+	public void DeleteText(string content)
+	{
+		base.LayoutText(text.text);
+
+		TypedText.TypedTextSettings textTyperSettings = new TypedText.TypedTextSettings();
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(",", new TypedText.RandomTimeDelay(0.075f, 0.1f)));
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(":", new TypedText.RandomTimeDelay(0.125f, 0.175f)));
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay("-", new TypedText.RandomTimeDelay(0.125f, 0.175f)));
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(".", new TypedText.RandomTimeDelay(0.3f, 0.4f)));
+		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay("\n", new TypedText.RandomTimeDelay(0.5f, 0.6f)));
+
+		textTyperSettings.splitMode = TypedText.TypedTextSettings.SplitMode.Character;
+		textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.03f, 0.0425f);
+
+		startText = text.text;
+		richText = new RichTextSubstring(text.text);
+		textTyper = new TypedText();
+		textTyper.OnTypeText += OnDeleteText;
+		textTyper.OnCompleteTyping += CompleteTyping;
+		textTyper.TypeText(richText.plainText, textTyperSettings);
+	}
+
+	void OnDeleteText(string newText)
+	{
+		int amountLeft = startText.Length - textTyper.text.Length;
+		text.text = richText.Substring(0, amountLeft);
+		if (newText != " ")
+			AudioClipDatabase.Instance.PlayKeySound();
+	}
+
 	protected override void CompleteTyping () {
 		colorTween.Tween(text.color, driedColor, 8);
 		base.CompleteTyping();
