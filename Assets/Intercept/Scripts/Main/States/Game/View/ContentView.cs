@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ContentView : StoryElementView {
 
-	public TypedText textTyper;
+	public TypedText textTyper = new TypedText();
 	private RichTextSubstring richText;
 
 	public Color driedColor;
@@ -12,7 +12,6 @@ public class ContentView : StoryElementView {
 	string startText;
 
 	protected override void Awake () {
-		textTyper = new TypedText();
 		text.color = wetColor;
 		base.Awake();
 	}
