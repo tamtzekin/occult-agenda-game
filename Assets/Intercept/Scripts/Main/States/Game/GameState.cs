@@ -121,7 +121,10 @@ public class GameState : MainState {
 				AudioClipDatabase.Instance.PlaySanityIncrease();
 				if(sanityEffects.Count >= newSanity && previousSanityValue >= 0)
 				{
-					sanityEffects[previousSanityValue].ApplyEffect();
+					for (int i = previousSanityValue; i < newSanity; i++)
+					{
+						sanityEffects[i].ApplyEffect();
+					}
 				}
 				
 			}
@@ -131,7 +134,10 @@ public class GameState : MainState {
 				AudioClipDatabase.Instance.PlaySanityDecrease();
 				if (sanityEffects.Count >= previousSanityValue && newSanity >= 0)
 				{
-					sanityEffects[newSanity].RemoveEffect();
+					for (int i = newSanity; i < previousSanityValue; i++)
+					{
+						sanityEffects[i].RemoveEffect();
+					}
 				}
 			}
 			previousSanityValue = newSanity;
