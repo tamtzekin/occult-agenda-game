@@ -44,7 +44,10 @@ public class IntroTypedText : UIMonoBehaviour {
 	}
 
 	private void Update () {
-		typedText.Loop();
-		text.text = typedText.text;
+		if (typedText.typing)
+		{
+			typedText.Loop();
+			text.text = typedText.text;
+		}
 	}
 }

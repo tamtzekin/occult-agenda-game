@@ -38,6 +38,7 @@ public class IntroState : MainState {
 	private IEnumerator DoLongIntro () {
 		yield return new WaitForSeconds(2f);
 
+		/*
 		inklePresentsText.gameObject.SetActive(true);
 		while(inklePresentsText.typedText.typing) {
 			yield return null;
@@ -46,6 +47,7 @@ public class IntroState : MainState {
 		inklePresentsText.gameObject.SetActive(false);
 
 		yield return new WaitForSeconds(2);
+		*/
 
 
 
@@ -53,11 +55,13 @@ public class IntroState : MainState {
 		while(theInterceptText.typedText.typing) {
 			yield return null;
 		}
+		theInterceptText.gameObject.gameObject.GetComponent<ScalePulser>().enabled = true;
+
 		AudioClipDatabase.Instance.PlayHorrorSting();
 		yield return new WaitForSeconds(2.5f);
-		theInterceptText.gameObject.SetActive(false);
+		//theInterceptText.gameObject.SetActive(false);
 
-		yield return new WaitForSeconds(0.5f);
+		//yield return new WaitForSeconds(0.5f);
 		yield return StartCoroutine(DoShortIntro());
 	}
 
