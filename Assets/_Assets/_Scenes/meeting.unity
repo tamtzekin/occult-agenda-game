@@ -5780,6 +5780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skipIntro: 0
   fastIntro: 0
+  fastText: 0
   currentState: {fileID: 0}
   introState: {fileID: 1569955018}
   gameState: {fileID: 2039295622}
