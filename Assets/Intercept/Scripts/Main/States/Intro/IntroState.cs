@@ -8,6 +8,8 @@ public class IntroState : MainState {
 	public IntroTypedText inklePresentsText;
 	public IntroTypedText theInterceptText;
 
+	[SerializeField] GameObject beginObject;
+
 	public override void Enter () {
 		group.gameObject.SetActive(true);
 		group.alpha = 1;
@@ -16,6 +18,7 @@ public class IntroState : MainState {
 		inklePresentsText.gameObject.SetActive(false);
 		theInterceptText.gameObject.SetActive(false);
 		group.gameObject.SetActive(true);
+		beginObject.SetActive(false);
 		base.Enter ();
 	}
 
@@ -62,7 +65,13 @@ public class IntroState : MainState {
 		//theInterceptText.gameObject.SetActive(false);
 
 		//yield return new WaitForSeconds(0.5f);
-		yield return StartCoroutine(DoShortIntro());
+		//yield return StartCoroutine(DoShortIntro());
+		beginObject.SetActive(true);
+	}
+
+	public void Begin()
+	{
+		StartCoroutine(DoShortIntro());
 	}
 
 	// Just fade in from black
