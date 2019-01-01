@@ -376,7 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layoutGroup: {fileID: 114774875138350572}
   scrollRect: {fileID: 114271682972597514}
-  minY: 0
+  minY: 600
   maxY: 0
   paperImage: {fileID: 114995388729327694}
   sealImage: {fileID: 114063191696287596}
