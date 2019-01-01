@@ -8,7 +8,7 @@ public class IntroState : MainState {
 	public IntroTypedText inklePresentsText;
 	public IntroTypedText theInterceptText;
 
-	[SerializeField] GameObject beginObject;
+	[SerializeField] Text beginText;
 
 	public override void Enter () {
 		group.gameObject.SetActive(true);
@@ -18,7 +18,7 @@ public class IntroState : MainState {
 		inklePresentsText.gameObject.SetActive(false);
 		theInterceptText.gameObject.SetActive(false);
 		group.gameObject.SetActive(true);
-		beginObject.SetActive(false);
+		beginText.gameObject.SetActive(false);
 		base.Enter ();
 	}
 
@@ -66,12 +66,25 @@ public class IntroState : MainState {
 
 		//yield return new WaitForSeconds(0.5f);
 		//yield return StartCoroutine(DoShortIntro());
-		beginObject.SetActive(true);
+		beginText.gameObject.SetActive(true);
 	}
 
 	public void Begin()
 	{
+		StartCoroutine(FadeOut(1f));
 		StartCoroutine(DoShortIntro());
+	}
+
+	public IEnumerator FadeOut(float fadeTime)
+	{
+		FloatTween alphaTween = new FloatTween();
+		alphaTween.Tween(1, 0, fadeTime);
+		while (alphaTween.tweening)
+		{
+			beginText.color = new Color(beginText.color.r, beginText.color.g, beginText.color.b, alphaTween.currentValue);
+			alphaTween.Loop();
+			yield return null;
+		}
 	}
 
 	// Just fade in from black

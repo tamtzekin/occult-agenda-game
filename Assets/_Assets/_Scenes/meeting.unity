@@ -6460,7 +6460,7 @@ MonoBehaviour:
   group: {fileID: 809506816}
   inklePresentsText: {fileID: 1835827615}
   theInterceptText: {fileID: 1003711404}
-  beginObject: {fileID: 1288007514}
+  beginText: {fileID: 1288007520}
 --- !u!1 &1588716964
 GameObject:
   m_ObjectHideFlags: 0
