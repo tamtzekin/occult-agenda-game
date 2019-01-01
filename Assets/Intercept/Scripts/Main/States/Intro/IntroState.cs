@@ -66,19 +66,29 @@ public class IntroState : MainState {
 
 		//yield return new WaitForSeconds(0.5f);
 		//yield return StartCoroutine(DoShortIntro());
-		beginText.gameObject.SetActive(true);
+		StartCoroutine(FadeButton(1f, true));
 	}
 
 	public void Begin()
 	{
-		StartCoroutine(FadeOut(1f));
+		StartCoroutine(FadeButton(1f, false));
 		StartCoroutine(DoShortIntro());
 	}
 
-	public IEnumerator FadeOut(float fadeTime)
+	public IEnumerator FadeButton(float fadeTime, bool fadeIn)
 	{
 		FloatTween alphaTween = new FloatTween();
-		alphaTween.Tween(1, 0, fadeTime);
+		Button button = beginText.GetComponent<Button>();
+		if (fadeIn)
+		{
+			alphaTween.Tween(0, 1, fadeTime);
+			beginText.gameObject.SetActive(true);
+		}
+		else
+		{
+			button.interactable = false;
+			alphaTween.Tween(1, 0, fadeTime);
+		}
 		while (alphaTween.tweening)
 		{
 			beginText.color = new Color(beginText.color.r, beginText.color.g, beginText.color.b, alphaTween.currentValue);
