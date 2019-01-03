@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: 
-  driedColor: {r: 0.4392157, g: 0.39607844, b: 0.35686275, a: 1}
+  driedColor: {r: 0.30147058, g: 0.30147058, b: 0.30147058, a: 1}
   wetColor: {r: 0.125, g: 0.105742306, b: 0.08823529, a: 1}
 --- !u!114 &11492284
 MonoBehaviour:
