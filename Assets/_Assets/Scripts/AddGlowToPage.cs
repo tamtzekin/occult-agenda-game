@@ -34,6 +34,7 @@ public class AddGlowToPage : MonoBehaviour
 
 	IEnumerator GlowIn(float fadeTime)
 	{
+		Main.Instance.gameState.contentManager.shadowImage.gameObject.SetActive(false);
 		Main.Instance.gameState.contentManager.paperImage.material = new Material(glowMaterial);
 		glowTween.Tween(2.2f, 1.2f, fadeTime);
 		while (glowTween.tweening)
@@ -66,6 +67,7 @@ public class AddGlowToPage : MonoBehaviour
 			yield return null;
 		}
 		Main.Instance.gameState.contentManager.paperImage.material = null;
+		Main.Instance.gameState.contentManager.shadowImage.gameObject.SetActive(true);
 		bloom.intensity.value = startIntensity;
 	}
 
