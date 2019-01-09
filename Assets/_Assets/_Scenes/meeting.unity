@@ -3805,7 +3805,7 @@ GameObject:
   - component: {fileID: 934203157}
   - component: {fileID: 934203156}
   m_Layer: 0
-  m_Name: SanityChartShow
+  m_Name: SanityChartShowBottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
