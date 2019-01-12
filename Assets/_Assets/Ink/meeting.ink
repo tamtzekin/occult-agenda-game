@@ -22,6 +22,9 @@ www.inklestudios.com
 // Insanity state
 VAR insanity = 0
 
+// Ritual progress 
+VAR ritualprogress = -> summonone
+
 // Items
 VAR dictionary = false
 VAR fontpack = false
@@ -69,10 +72,10 @@ EXTERNAL getTime()
     - (mayor)
         *   [Transcribe the Mayor's announcement]MAYOR'S ANNOUNCEMENTS:
             Mayor Van Zetten announced the passing of long time Poimena resident and beloved minutetaker, Bob Olmstead. 
-            His son, James Olmstead took his place as minutetaker for the Town of Poimena. 
+            His second nephew, Robert Olmstead Jnr. took his place as the new minutetaker for the Town. The Mayor welcomed Robert back after his long time out of town in Launceston. He joked that Olmstead Snr. would always be inquiring into the Town Board's affairs. He advised the minutetaker to not be as inquisitive as his nosy uncle.
     
             Mayor Van Zetten opened the meeting by reminding residents that the annual renewal of the Town Pact would be lapsing next month. 
-            The following meeting, taking place on 17 September, the Waning Crescent of the moon cycle, will be the date the conditions of the New Pact are decided upon. #AddMinutes=7
+            The following meeting, taking place on 17 September, the Waning Crescent of the moon cycle, would be the date the conditions of the New Pact are decided upon. #AddMinutes=7
     
     -   (rollcallone)
         *   [Take attendance]ROLL CALL:
@@ -84,20 +87,20 @@ EXTERNAL getTime()
     
     -   (agendaone)
         The {first|second|third|final} item on the agenda was addressed by
-        *   [The Mayor] Mayor Van Zetten, who noted the ongoing works in the town's sewerage system. An attendee asked about the liquid that had been appearing in their home's faucets, which was said to cause sweats and mild hallucinations for anyone who drank the water.#Append #AddMinutes=3
-            **  [Clarify] The Mayor explained that the "visitor" that had existed beneath the town for thousands (fact check?) of years had affected the quality of the town's water supply to be beneath an acceptable standard, and thanked the gentleman for his patience and understanding.
+        *   [The Mayor] Mayor Van Zetten, who addressed a complaint from the public about the town's sewerage system. The complaint was about the liquid that had been appearing in their home's faucets, which was said to cause sweats and mild hallucinations for anyone who drank the water.#Append #AddMinutes=3
+            **  [Clarify] The Mayor explained that the "visitor" that had existed beneath the town for thousands (fact check?) of years had affected the quality of the town's water supply to be below an acceptable standard. He noted it had become considerably worse as the Pact's expiration date became closer.  
                 ~ change(insanity, 1)
                 *** [Clarify further] Ms. Marsh interrupted and reminded the meeting that there were other matters on the agenda.
                 ~ change(insanity, 1)
                 *** [Next item]  
 
-            **  [Leave it] The Mayor thanked the gentleman for his patience and understanding.
+            **  [Leave it] The Mayor moved to the next item. 
     
-        *   Jim Williamson[]. Constable Williamson reported that he received complaints from homeowners that they had seen "unsettling" rubbish appearing in their backyard, as well as #Append #AddMinutes=4
-            **  [beer bottles]"beer bottles" scattered around their property. No further delinquent activity was reported.#Append
+        *   Jim Williamson[]. Constable Williamson reported that he received complaints from homeowners that they had seen "unsettling" rubbish on their front lawn, left behind by young people with an out-of-town appearance. They reported #Append #AddMinutes=4
+            **  [loud music]{insanity > 0: hearing a voice capable of sounds beyond the human throat coming from beneath the ground.}{insanity < 0: hearing loud music with foreign voices that sounded like singing. No further delinquent activity was reported.}#Append
                 ~ change(insanity, -1)
                 
-            **  [the skin of small animals such as rabbits]{insanity > 0: "the skin of small animals such as rabbits", stained by dried blood and splayed out in runic patterns across their front lawns and emitting a terrible stench.}{insanity < 0: "the skin of small animals such as rabbits" being laid in patterns across their front lawns.}#Append
+            **  [the skin of small animals such as rabbits]{insanity > 0: seeing the skin of small animals such as rabbits, stained by dried blood, splayed out in runic patterns across their front lawns and emitting a stench like "singed bark".}{insanity < 0: "the  skin of small animals such as rabbits emitting a stench that smelled like "the new takeout place that opened up down the road last week."}#Append
                 ~ change(insanity, 1)
                 
                 Upon further inspection he noted their gardens were dug up and 
@@ -107,7 +110,7 @@ EXTERNAL getTime()
                     ~ change(insanity, -1)
                     **** [Next item]
                     
-                *** [strange markings]"strange markings" were left against their garage doors{insanity > 0: arranged in words of a non-linear alphabet.}{insanity < 0:.}#Append
+                *** [strange markings]"strange markings" were left against their garage doors{insanity > 0: arranged in words of a non-linear alphabet.}{insanity < 0:. The citizen noted the language was written in circular patterns, possibly Middle Eastern.}#Append
                     The Constable requested that if the old rituals are to be continued they be taken elsewhere. Constable Williamson added he "preferred the previous Old One(s)" because "they kept it clean, at least." 
                         ~ change(insanity, 1)
                     ****    [Clarify]Mayor Van Zetten reminded Minutetaker Olmstead that it was not his place to comment on agenda matters. Constable Williamson answered anyway, and said the markings were identified as an old language only communicated by visual, non-linear means. 
@@ -115,23 +118,23 @@ EXTERNAL getTime()
                         ~ constabletaken = true
                     ****    [Next item]
                        
-        *   Alicia Marsh[]. Ms. Marsh addressed the Mayor directly on the minute-keeping. She reminded those in attendance that notes were strictly only to be taken by the assigned Minutekeeper.#Append #AddMinutes=6
-            **  [Written notes?] No written notes of any kind were to be taken. Ms. Marsh reminded them this would interrupt the written sigils needed for the New Pact to be conducted.
+        *   Alicia Marsh[]. Ms. Marsh addressed the Mayor directly on the minute-keeping. She reminded the minutetaker that these should be recorded in formal hand.#Append #AddMinutes=6
+            **  [Formal?] She said it was important for the sigils to be interpreted correctly.
                 ~ change(insanity, 1)
                 *** [Clarify] Constable Williamson suggested this matter be raised next meeting. All in favour. 
                 ~ change(insanity, 1)
                 *** [Next item]
         
-            **  [Verbal notes?]Constable Williamson asked if verbal notes were allowed to be recorded. Mayor Van Zetten reminded him this was permitted under the conditions of the previous Pact.
+            **  [Is shorthand allowed?]Ms. Marsh seemed frustrated. She reminded the minutetaker that shorthand did not exist in the time of the Old Ones.
                 ~ change(insanity, 1)
-                *** [Clarify] Ms. Marsh said this was just a matter of preference for the Old Ones. 
+                *** [Clarify] Mayor Van Zetten interrupted to say that this is how it always has been done, and reminded the minutetaker to not inquire into procedural matters. 
                 ~ change(insanity, 1)
                 *** [Next item]
 
         *   [Barnabas Marsh]
             the Mayor again. He asked Mr. Marsh if he had any motions to raise. Mr. Marsh did not comment - this was expected behaviour of Mr. Marsh at Town Hall meetings.#Append #AddMinutes=5
                 
-        *   [No one]#Delete
+        *   [No one] #Delete
         ->  endagendaone
                 
     -   {agendaone < 4:->  agendaone}{agendaone == 4:->  endagendaone}
@@ -160,7 +163,7 @@ EXTERNAL getTime()
     
     -   (rollcalltwo)
         *   [Take attendance]ROLL CALL:
-            Ms. Alicia Marsh{not constabletaken:, Constable James Williamson,} and Mr. Barnabas Marsh were present. {constabletaken: Constable James Williamson sent his apologies; he was unable to make the meeting on account of the moon in its Waning Crescent phase.}
+            Ms. Alicia Marsh{not constabletaken:, Constable Jim Williamson,} and Mr. Barnabas Marsh were present. {constabletaken: Constable Jim Williamson sent his apologies; he was unable to make the meeting on account of the moon in its Waning Crescent phase.}
 
     -   (agendatwo)
         The {first|second|third|final} item on the agenda was addressed by
@@ -203,7 +206,7 @@ EXTERNAL getTime()
             Mayor Van Zetten suggested Minutetaker Olmstead consult the Council's IT Department to raise an urgent ticket before next meeting. Ms. Marsh said it was important Minutetaker Olmstead was able to type in the Old Language for the New Pact to be successful.
             ~fontpack = true
             
-        *   [No one]#Delete
+        *   [No one] #Delete
             Mayor Van Zetten handed out photocopies of the runes to those in attendance. No further agenda items were raised. 
             ~ photocopies = true 
         ->  endagendatwo
@@ -236,11 +239,14 @@ EXTERNAL getTime()
         *   [The Old One's announcements]THE OLD ONE'S ANNOUNCEMENTS: 
             The Old One spoke as if there was a voice present in the room with no clear source. It reminded the meeting that it was tired and it was time for the New Pact to claim its payment from "these feeble planeswalkers" once more.
             The opening address of the New Pact was spoken by {not constabletaken:Constable Williamson}{constabletaken: Ms. Marsh}, while the next phases were written down by Minutetaker Olmstead:
+    -
+    -> summonone
 
-    - (summonone)
+=== summonone
         *   \**REDACTED**
             The phrase was redacted by Minutetaker Olmstead of their own accord and not written down.
             ~ change(insanity, 1)
+            -> ritualrefusal
 
         *   FONT_OLD Ph'nglui mglw'nafh Pht'thya-l'y Blue Tier Plateau wgah'nagl fhtagn[].
             ~ change(insanity, 1)
@@ -249,12 +255,14 @@ EXTERNAL getTime()
         *   {dictionary && fontpack && photocopies}[In her house at Blue Tier Plateau dead Pht'thya-l'y lies in eternal nightmare.]IN HER HOUSE AT BLUE TIER PLATEAU DIED PHT'THYA-L'Y LIES IN ETERNAL NIGHTMARE.
             ~ change(insanity, -1)
             
-    - (summontwo)
+    -
+    ->  summontwo
+
+=== summontwo
+~ritualprogress = -> summontwo
+
         *   \(unintelligible)
-            The phrase was deemed unintelligible by Minutetaker Olmstead and therefore not written down.
-            The Mayor uttered a deafening screech that was beyond any frequency imaginable to the human brain, and proceeded to roll his eyes into the back of his head as his arms writhed above his head.
-            Mr. Marsh urged Minutetaker Olmstead to continue with the ritual before the Mayor traversed into a different plane.
-            ~ change(insanity, 1)
+            -> ritualrefusal
 
         *   {dictionary && fontpack && photocopies} [Pht'thya-l'y sleeps and waits, we rescind our prayers and silence it eternally.]PHT'THYA-L'Y SLEEPS AND WAITS, WE RESCIND OUR PRAYERS AND SILENCE IT ETERNALLY.            
             ~ change(insanity, -1)
@@ -262,25 +270,60 @@ EXTERNAL getTime()
         *   FONT_OLD Mglw'nafh fhthagn-ngah cf'ayak 'vulgtmm vugtlag'n[].
             ~ change(insanity, 1)
             // "[It] sleeps/waits and then acts, we send [our] prayers [to thee], answer [us]"
+    
+    -
+    ->  summonthree
+    
+=== summonthree
+~ritualprogress = -> summonthree
 
-    - (summonthree)
         *   {dictionary && fontpack && photocopies}[The Old Ones are forgotten by the people of Poimena. Pht'thya-l'y will sink to sleep eternal. Pht'thya-l'y is forgotten.]THE OLD ONES ARE FORGOTTEN BY THE PEOPLE OF POIMENA. PHT'THYA-L'Y WILL SINK TO SLEEP ETERNAL. PHT'THYA-L'Y IS FORGOTTEN.
             ~ change(insanity, -1)
 
         *   \(unintelligible)
-            The phrase was deemed unintelligible by Minutetaker Olmstead and therefore not written down.
-            Mr. Marsh leapt forth and seized Minutetaker Olmstead's laptoariaierklT$O444444444444t
-            al4llllwtl44tttttttttttttttttttttttttttttttttt
-            W4TLLT4LTL4W
-            OOK0PK090O9KP9
-            inutetaker seized control of the laptop once more and #EndBack=blood
-            ~ change(insanity, 1)
+            -> ritualrefusal
 
         *   FONT_OLD Ph'nglui mglw'nafh Pht'thya-l'y Poimena n'gha-ghaa naf'lthagn[].
             ~ change(insanity, 1)
             // DEATH "Gone but not forgotten, Pht'thya-l'y sleeps/waits at Poimena, [promising] death to one and all."
+            
+        *   {insanity > 6}The Old One Pht'thya-l'y anoints Minutetaker Olmstead as the new Prince of Poimena. 
+            {not mayortaken: The Mayor gasped "A mere Minutetaker dares to challenge me? The impudence!}
+            {mayortaken && constabletaken: Ms. Marsh laughed "I always knew an Olmstead had it in them!"}
 
     -   -> endinghandler
+    
+=== ritualrefusal
+    * [Return to the ritual] -> mayorbridge
+    * unintelligible
+    The Mayor asked to check the notes.
+        **[Show him] #Delete
+        The Mayor told him to follow the ritual properly.
+        **[Ignore] Olmstead ignored the Mayor.
+    -
+    //Ritual proceeds
+    *  [Return to the ritual] -> mayorbridge
+    * unintelligible
+    The phrase was deemed unintelligible by Minutetaker Olmstead and therefore not written down.
+    The Mayor uttered a deafening screech that was beyond any frequency imaginable to the human brain, and proceeded to roll his eyes into the back of his head as his arms writhed above his head.
+        Mr. Marsh urged Minutetaker Olmstead to continue with the ritual before the Mayor traversed into a different plane.
+            ~ change(insanity, 1)
+    -
+    //people realise you're messing it up
+    * [last chance] -> mayorbridge
+    * unintelligible
+        The phrase was deemed unintelligible by Minutetaker Olmstead and therefore not written down.    Mr. Marsh leapt forth and seized Minutetaker Olmstead's laptoariaierklT$O444444444444t
+            al4llllwtl44tttttttttttttttttttttttttttttttttt
+            W4TLLT4LTL4W
+            OOK0PK090O9KP9
+            The Minutetaker seized control of the laptop once more and #EndBack=blood
+            ~ change(insanity, 1)
+            
+        -> endinghandler
+    
+    - (mayorbridge)
+    The Mayor asked Minutetaker Olmstead to continue transcribing the Pact. 
+    -> ritualprogress
     
 === endinghandler
 {   
@@ -298,6 +341,10 @@ EXTERNAL getTime()
         
     -   insanity > 0 && constabletaken || mayortaken:
         #Ending=worstending
+        -> DONE
+        
+    -   insanity > 6 && constabletaken && mayortaken:
+        #Ending=evilending
         -> DONE
     
     -   else:
