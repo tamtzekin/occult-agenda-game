@@ -110,8 +110,8 @@ EXTERNAL getTime()
                 *** [strange markings]"strange markings" were left against their garage doors{insanity > 0: arranged in words of a non-linear alphabet.}{insanity < 0:.}#Append
                     The Constable requested that if the old rituals are to be continued they be taken elsewhere. Constable Williamson added he "preferred the previous Old One(s)" because "they kept it clean, at least." 
                         ~ change(insanity, 1)
-                    ****    [Clarify]Mayor Van Zetten reminded Minutetaker Olmstead that it was not his place to comment on agenda matters. Constable Williamson said answered anyway, and said the markings were identified as an old language only communicated by visual, non-linear means. 
-                        At this time, Mrs. Marsh pointed to Mr. Marsh in his chair and commented: "They are not pleased with you."
+                    ****    [Clarify]Mayor Van Zetten reminded Minutetaker Olmstead that it was not his place to comment on agenda matters. Constable Williamson answered anyway, and said the markings were identified as an old language only communicated by visual, non-linear means. 
+                        At this time, Mrs. Marsh pointed to the Constable in his chair and commented: "They are not pleased with you. You've spoken too freely."
                         ~ constabletaken = true
                     ****    [Next item]
                        
