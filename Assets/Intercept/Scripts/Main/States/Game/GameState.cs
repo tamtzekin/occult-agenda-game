@@ -323,7 +323,7 @@ public class GameState : MainState {
 						}
 					}
 				}
-				if (content.Length > 0)
+				if (content.Length > 0 || delete)
 				{
 					ContentView contentView;
 					if(append)
