@@ -189,8 +189,9 @@ public class GameState : MainState {
 		StartCoroutine(OnAdvanceStory());
 
 		if(oldPageMaterial && !ending)
-		{
+		{// If the page is glowing
 			contentManager.paperImage.material = oldPageMaterial;
+			contentManager.shadowImage.gameObject.SetActive(false);// hide page shadow if the page is glowing
 		}
 
 		if (meetingName.Equals("meetingthree"))
