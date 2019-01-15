@@ -7,24 +7,20 @@ public class SanityFader : MonoBehaviour
 {
 	private FloatTween alphaTween = new FloatTween();
 
-	Image image;
-
-	void Awake()
-	{
-		image = GetComponent<Image>();
-	}
+	[SerializeField]
+	Image targetImage;
 
 	public void StartFadeIn()
 	{
 		alphaTween.OnChange += ChangeAlphaTween;
 		Debug.Log("Fade in " + name);
-		gameObject.SetActive(true);
+		targetImage.gameObject.SetActive(true);
 		StartCoroutine(FadeIn(2f));
 	}
 
 	void ChangeAlphaTween(float currentValue)
 	{
-		image.color = new Color(image.color.r, image.color.g, image.color.b, currentValue);
+		targetImage.color = new Color(targetImage.color.r, targetImage.color.g, targetImage.color.b, currentValue);
 	}
 
 	IEnumerator FadeIn(float fadeTime)
@@ -38,5 +34,19 @@ public class SanityFader : MonoBehaviour
 			yield return null;
 		}
 		Debug.Log("fade done");
+	}
+
+	public void StartFadeOut()
+	{
+		StartCoroutine(FlickerOut(2f));
+	}
+
+	IEnumerator FlickerOut(float fadeTime)
+	{
+		targetImage.gameObject.SetActive(false);
+		yield return new WaitForSeconds(0.2f);
+		targetImage.gameObject.SetActive(true);
+		yield return new WaitForSeconds(0.2f);
+		targetImage.gameObject.SetActive(false);
 	}
 }

@@ -708,9 +708,9 @@ MonoBehaviour:
   addEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2051692467}
-        m_MethodName: StartFadeIn
-        m_Mode: 1
+      - m_Target: {fileID: 2051692465}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -719,9 +719,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1738219829}
-        m_MethodName: StartFadeIn
-        m_Mode: 1
+      - m_Target: {fileID: 1738219827}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -730,9 +730,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 387594226}
-        m_MethodName: StartFadeIn
-        m_Mode: 1
+      - m_Target: {fileID: 387594224}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -741,9 +741,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 695310093}
-        m_MethodName: StartFadeIn
-        m_Mode: 1
+      - m_Target: {fileID: 695310091}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1499,7 +1499,6 @@ GameObject:
   - component: {fileID: 387594225}
   - component: {fileID: 387594228}
   - component: {fileID: 387594227}
-  - component: {fileID: 387594226}
   m_Layer: 5
   m_Name: SanityTLLine
   m_TagString: Untagged
@@ -1525,17 +1524,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &387594226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 387594224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaaa71bca192c945970d9e326eac2b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &387594227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2738,7 +2726,6 @@ GameObject:
   - component: {fileID: 695310092}
   - component: {fileID: 695310095}
   - component: {fileID: 695310094}
-  - component: {fileID: 695310093}
   m_Layer: 5
   m_Name: SanityTLCircle
   m_TagString: Untagged
@@ -2764,17 +2751,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &695310093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 695310091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaaa71bca192c945970d9e326eac2b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &695310094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3804,6 +3780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 934203157}
   - component: {fileID: 934203156}
+  - component: {fileID: 934203158}
   m_Layer: 0
   m_Name: SanityChartShowBottomRight
   m_TagString: Untagged
@@ -3825,7 +3802,7 @@ MonoBehaviour:
   addEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1237389655}
+      - m_Target: {fileID: 934203158}
         m_MethodName: StartFadeIn
         m_Mode: 1
         m_Arguments:
@@ -3852,9 +3829,9 @@ MonoBehaviour:
   removeEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1237389650}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 934203158}
+        m_MethodName: StartFadeOut
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3878,6 +3855,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &934203158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 934203155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcaaa71bca192c945970d9e326eac2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImage: {fileID: 1237389652}
 --- !u!1 &939615192
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,6 +5051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171065775}
   - component: {fileID: 1171065774}
+  - component: {fileID: 1171065776}
   m_Layer: 0
   m_Name: SanityChartShowTopLeft
   m_TagString: Untagged
@@ -5083,7 +5073,7 @@ MonoBehaviour:
   addEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1917080317}
+      - m_Target: {fileID: 1171065776}
         m_MethodName: StartFadeIn
         m_Mode: 1
         m_Arguments:
@@ -5110,9 +5100,9 @@ MonoBehaviour:
   removeEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1917080312}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1171065776}
+        m_MethodName: StartFadeOut
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5136,6 +5126,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1171065776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171065773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcaaa71bca192c945970d9e326eac2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImage: {fileID: 1917080315}
 --- !u!1 &1215409180
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,7 +5218,6 @@ GameObject:
   - component: {fileID: 1237389653}
   - component: {fileID: 1237389652}
   - component: {fileID: 1237389654}
-  - component: {fileID: 1237389655}
   m_Layer: 5
   m_Name: SanityChartBottomRight
   m_TagString: Untagged
@@ -5289,17 +5290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 10
---- !u!114 &1237389655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1237389650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaaa71bca192c945970d9e326eac2b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1261176945
 GameObject:
   m_ObjectHideFlags: 0
@@ -6854,7 +6844,6 @@ GameObject:
   - component: {fileID: 1738219828}
   - component: {fileID: 1738219831}
   - component: {fileID: 1738219830}
-  - component: {fileID: 1738219829}
   m_Layer: 5
   m_Name: SanityBRCircle
   m_TagString: Untagged
@@ -6880,17 +6869,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0030794144, y: -0.00002761537}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1738219829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1738219827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaaa71bca192c945970d9e326eac2b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1738219830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7705,7 +7683,6 @@ GameObject:
   - component: {fileID: 1917080316}
   - component: {fileID: 1917080315}
   - component: {fileID: 1917080314}
-  - component: {fileID: 1917080317}
   m_Layer: 5
   m_Name: SanityChartTopLeft
   m_TagString: Untagged
@@ -7778,17 +7755,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1917080312}
---- !u!114 &1917080317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1917080312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaaa71bca192c945970d9e326eac2b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1927241956
 GameObject:
   m_ObjectHideFlags: 0
@@ -8570,7 +8536,6 @@ GameObject:
   - component: {fileID: 2051692466}
   - component: {fileID: 2051692469}
   - component: {fileID: 2051692468}
-  - component: {fileID: 2051692467}
   m_Layer: 5
   m_Name: SanityBRLine
   m_TagString: Untagged
@@ -8596,17 +8561,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2051692467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051692465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaaa71bca192c945970d9e326eac2b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2051692468
 MonoBehaviour:
   m_ObjectHideFlags: 0
