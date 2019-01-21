@@ -9,6 +9,7 @@ public class IntroState : MainState {
 	public IntroTypedText theInterceptText;
 
 	[SerializeField] Text beginText;
+	[SerializeField] Text quitText;
 
 	public override void Enter () {
 		group.gameObject.SetActive(true);
@@ -19,6 +20,7 @@ public class IntroState : MainState {
 		theInterceptText.gameObject.SetActive(false);
 		group.gameObject.SetActive(true);
 		beginText.gameObject.SetActive(false);
+		quitText.gameObject.SetActive(false);
 		base.Enter ();
 	}
 
@@ -66,23 +68,25 @@ public class IntroState : MainState {
 
 		//yield return new WaitForSeconds(0.5f);
 		//yield return StartCoroutine(DoShortIntro());
-		StartCoroutine(FadeButton(1f, true));
+		StartCoroutine(FadeButton(beginText, 1f, true));
+		StartCoroutine(FadeButton(quitText, 1f, true));
 	}
 
 	public void Begin()
 	{
-		StartCoroutine(FadeButton(1f, false));
+		StartCoroutine(FadeButton(beginText, 1f, false));
+		StartCoroutine(FadeButton(quitText, 1f, false));
 		StartCoroutine(DoShortIntro());
 	}
 
-	public IEnumerator FadeButton(float fadeTime, bool fadeIn)
+	public IEnumerator FadeButton(Text fadeText, float fadeTime, bool fadeIn)
 	{
 		FloatTween alphaTween = new FloatTween();
-		Button button = beginText.GetComponent<Button>();
+		Button button = fadeText.GetComponent<Button>();
 		if (fadeIn)
 		{
 			alphaTween.Tween(0, 1, fadeTime);
-			beginText.gameObject.SetActive(true);
+			fadeText.gameObject.SetActive(true);
 		}
 		else
 		{
@@ -91,7 +95,7 @@ public class IntroState : MainState {
 		}
 		while (alphaTween.tweening)
 		{
-			beginText.color = new Color(beginText.color.r, beginText.color.g, beginText.color.b, alphaTween.currentValue);
+			fadeText.color = new Color(fadeText.color.r, fadeText.color.g, fadeText.color.b, alphaTween.currentValue);
 			alphaTween.Loop();
 			yield return null;
 		}
